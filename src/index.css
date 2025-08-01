@@ -7,3 +7,7 @@
     --font-figtree : "Figtree", sans-serif;
     --font-mulish : "Mulish", sans-serif;
 }
+
+@theme{
+    --color-borderOur : rgba(0, 93, 170, 0.6)
+}
