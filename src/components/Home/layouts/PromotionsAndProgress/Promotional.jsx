@@ -3,11 +3,11 @@ import promoLogo from '../../../../assets/promotional-offers/promotion-logo.svg'
 
 const Promotional = () => {
     return (
-            <section className="w-[1310px] mx-auto  text-white rounded-lg mb-[148px]">
+            <section className="lg:w-[1310px] mx-auto  text-white rounded-lg mb-[148px]">
                 <div className='flex justify-center items-center'>
-                    <img src={promoLogo} alt="" />
+                    <img className='w-[80%] lg:w-auto' src={promoLogo} alt="" />
                 </div>
-                <div className="rounded-[12px] flex flex-col lg:flex-row items-center justify-between gap-8 p-[58px]">
+                <div className="rounded-[12px] flex flex-col lg:flex-row items-center justify-between gap-8 p-5 lg:p-[58px]">
                     {/* Left: Promotional text */}
 
                     <div className="lg:w-1/2 w-full text-center lg:text-start">
@@ -36,7 +36,7 @@ const Promotional = () => {
                     </div>
 
                     {/* Right: promotional image */}
-                    <div className="lg:w-[540px] py-10 w-full">
+                    <div className="lg:w-[540px] px-10 md:px-0 py-10 w-full">
                         <img
                             src={promoAdd}
                             alt="Social Media Posts / Ads"
@@ -46,10 +46,10 @@ const Promotional = () => {
 
 
                 </div>
-                <div className="bg-[#0D0D11] rounded-[12px] flex flex-col lg:flex-row items-center justify-between gap-8 p-[58px]">
+                <div className="bg-[#0D0D11] rounded-[12px] flex flex-col-reverse lg:flex-row items-center justify-between gap-8 p-5 lg:p-[58px]">
 
                     {/* Left: Promotional Image */}
-                    <div className="lg:w-[540px] py-10 w-full">
+                    <div className="lg:w-[540px] px-10 md:px-0 py-10 w-full">
                         <img
                             src={promoAdd}
                             alt="Social Media Posts / Ads"
@@ -84,7 +84,7 @@ const Promotional = () => {
                     </div>
 
                 </div>
-                <div className="rounded-[12px] flex flex-col lg:flex-row items-center justify-between gap-8 p-[58px]">
+                <div className="rounded-[12px] flex flex-col lg:flex-row items-center justify-between gap-8 p-5 lg:p-[58px]">
                     {/* Left: Promotional text */}
 
                     <div className="lg:w-1/2 w-full text-center lg:text-start">
@@ -113,7 +113,7 @@ const Promotional = () => {
                     </div>
 
                     {/* Right: promotional image */}
-                    <div className="lg:w-[540px] py-10 w-full">
+                    <div className="lg:w-[540px] px-10 md:px-0 py-10 w-full">
                         <img
                             src={promoAdd}
                             alt="Social Media Posts / Ads"
@@ -123,10 +123,10 @@ const Promotional = () => {
 
 
                 </div>
-                <div className="bg-[#0D0D11] rounded-[12px] flex flex-col lg:flex-row items-center justify-between gap-8 p-[58px]">
+                <div className="bg-[#0D0D11] rounded-[12px] flex flex-col-reverse lg:flex-row items-center justify-between gap-8 p-5 lg:p-[58px]">
 
                     {/* Left: Promotional Image */}
-                    <div className="lg:w-[540px] py-10 w-full">
+                    <div className="lg:w-[540px] px-10 md:px-0 py-10 w-full">
                         <img
                             src={promoAdd}
                             alt="Social Media Posts / Ads"
