@@ -33,7 +33,7 @@ const Partners = () => {
                     <div className="flex items-center justify-center py-8 border-b lg:border-b-0 border-r border-[#005DAA]">
                         <img src={creatopy} alt="Creatopy" className="h-6" />
                     </div>
-                    <div className="flex items-center justify-center py-8 border-b lg:border-b-0 border-r border-r border-[#005DAA]">
+                    <div className="flex items-center justify-center py-8 border-b lg:border-b-0 border-r border-[#005DAA]">
                         <img src={marq} alt="Marq" className="h-6" />
                     </div>
                     <div className="flex items-center justify-center py-8 border-r border-[#005DAA]">
