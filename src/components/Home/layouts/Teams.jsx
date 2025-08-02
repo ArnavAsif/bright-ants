@@ -4,7 +4,7 @@ import ui from '../../../assets/team-img/ui.svg';
 import web from '../../../assets/team-img/web.svg';
 import wordpress from '../../../assets/team-img/wordpress.svg';
 import Partners from './Partners';
-import idea from '../../../assets/idea.svg'
+import idea from '../../../assets/team-img/Idea.svg'
 import { Link } from 'react-router';
 
 const services = [
