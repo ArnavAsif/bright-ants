@@ -1,15 +1,16 @@
-import ContactSection from "./layouts/ContactSection";
 import Hero from "./layouts/Hero";
 import OurClient from "./layouts/OurClient";
-import WorkingProcess from "./layouts/WorkingProcess";
+import EveryPromotions from "./layouts/PromotionsAndProgress/EveryPromotions";
+import Teams from "./layouts/Teams";
+
 
 const HomePage = () => {
     return (
         <div>
             <Hero></Hero>
             <OurClient></OurClient>
-            <WorkingProcess></WorkingProcess>
-            <ContactSection></ContactSection>
+            <Teams></Teams>
+            <EveryPromotions></EveryPromotions>
         </div>
     );
 };

@@ -1,6 +1,6 @@
 const ContactSection = () => {
     return (
-        <section className=" text-white px-4 py-12">
+        <section id="contact" className=" text-white px-4 py-12">
             <div className="max-w-[1173px] mx-auto flex flex-col lg:flex-row justify-between gap-10">
                 {/* Contact Info */}
                 <div className="flex-1 flex justify-center md:justify-start items-center">

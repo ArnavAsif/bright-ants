@@ -9,7 +9,7 @@ const Navbar = () => {
     const [isMobileOpen, setIsMobileOpen] = useState(false);
     const [isServicesOpen, setIsServicesOpen] = useState(false);
 
-    
+
     return (
         <nav className="w-full text-white pt-[18px] pb-[19px] font-figtree">
             <div className="max-w-[1344px] mx-auto flex justify-between items-center">
@@ -36,12 +36,14 @@ const Navbar = () => {
 
                 {/* CTA Button (Desktop and Mobile) */}
                 <div>
-                    <a
-                        href="#"
+                    <button
+                        onClick={() => {
+                            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                        }}
                         className="bg-[#EA1B26] hover:bg-white hover:text-[#EA1B26] text-white px-[25px] py-[9px] font-bold text-lg transition-all duration-200"
                     >
                         Get a Quote
-                    </a>
+                    </button>
                 </div>
             </div>
 

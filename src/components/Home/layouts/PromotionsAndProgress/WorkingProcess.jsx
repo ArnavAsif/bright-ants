@@ -1,18 +1,18 @@
-import icon1 from '../../../assets/working/icon-1.svg'
-import icon2 from '../../../assets/working/icon-2.svg'
-import icon3 from '../../../assets/working/icon-3.svg'
-import one from '../../../assets/working/1.svg'
-import two from '../../../assets/working/2.svg'
-import three from '../../../assets/working/3.svg'
+import icon1 from '../../../../assets/working/icon-1.svg'
+import icon2 from '../../../../assets/working/icon-2.svg'
+import icon3 from '../../../../assets/working/icon-3.svg'
+import one from '../../../../assets/working/1.svg'
+import two from '../../../../assets/working/2.svg'
+import three from '../../../../assets/working/3.svg'
 
 
 const WorkingProcess = () => {
     return (
         <div>
             <div className="max-w-[1310px] mx-auto font-figtree">
-                <h1 className='text-6xl/[64px] font-extrabold text-center text-white mb-10'>Our Working Process</h1>
+                <h1 className='text-[34px]/[100%] tracking-[-3%] md:tracking-normal md:text-6xl/[64px] font-extrabold text-center text-white mb-10'>Our Working Process</h1>
             </div>
-            <div className="max-w-[1310px] mx-auto flex flex-wrap justify-between gap-6 font-figtree">
+            <div className="max-w-[1310px] mx-auto flex flex-wrap justify-between gap-14 md:gap-10 font-figtree">
                 {/* Card 1 */}
                 <div className="group transition-all ease-in-out duration-500 hover:pt-[60px] w-[410px] h-[484px] bg-[linear-gradient(to_bottom_right,rgba(62,53,245,1),rgba(71,255,175,0.8))] text-white px-10 pt-10 relative rounded-lg">
                     <h3 className="text-[22px]/[100%] font-extrabold mb-[10px]">CONSULTATION</h3>
