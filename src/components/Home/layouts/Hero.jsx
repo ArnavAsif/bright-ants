@@ -53,7 +53,7 @@ const Hero = () => {
                                     </motion.h2>
                                 </AnimatePresence>
                             </div>
-                            <div className='md:hidden absolute top-[-70px] left-[120px]'>
+                            <div className='lg:hidden absolute top-[-70px] left-[120px] md:top-[-160px] md:left-[80px]'>
                                 <img src={ant} alt="" />
                             </div>
                         </div>
@@ -70,7 +70,7 @@ const Hero = () => {
                     </div>
 
                     {/* Ant Image */}
-                    <div className=" hidden md:flex absolute top-[-190px] right-[-80px] w-[822px] max-w-none z-10 pointer-events-none">
+                    <div className=" hidden lg:flex absolute top-[-190px] right-[-80px] w-[822px] max-w-none z-10 pointer-events-none">
                         <img
 
                             src={ant}

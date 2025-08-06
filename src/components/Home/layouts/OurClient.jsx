@@ -24,7 +24,7 @@ import Marquee from 'react-fast-marquee'
 
 const OurClient = () => {
     return (
-        <div>
+        <div className='max-w-fit mx-auto overflow-hidden'>
             {/* image section for desktop*/}
             <div className='hidden md:flex justify-center items-center mt-[53px]'>
 
