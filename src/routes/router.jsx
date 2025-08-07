@@ -6,11 +6,11 @@ import HomePage from "../components/Home/HomePage";
 import About from "../components/About/About";
 import ContactUs from "../components/contact/ContactUs";
 import Service from "../components/Service/Service";
-import GraphicsDesign from "../components/Service/graphicsDesign";
 import DigitalMediaDesign from "../components/Service/DigitalMediaDesign";
 import UIandUX from "../components/Service/UIandUX";
 import WebDesign from "../components/Service/WebDesign";
 import WordPress from "../components/Service/WordPress";
+import Graphics from "../components/Service/Graphics";
 
 
 const router = createBrowserRouter([
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
         children: [
           {
             path: '/service/graphicsDesign',
-            element: <GraphicsDesign></GraphicsDesign>
+            element: <Graphics></Graphics>
           },
           {
             path: '/service/digitalMediaDesign',
