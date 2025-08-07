@@ -3,12 +3,9 @@ import image2 from '../../../assets/hero2nd/image2.svg'
 import image3 from '../../../assets/hero2nd/image3.svg'
 import image4 from '../../../assets/hero2nd/image4.svg'
 import image5 from '../../../assets/hero2nd/image5.svg'
-import image6 from '../../../assets/hero2nd/image6.svg'
 import image7 from '../../../assets/hero2nd/image7.svg'
 import image8 from '../../../assets/hero2nd/image8.svg'
 import image9 from '../../../assets/hero2nd/image9.svg'
-import image10 from '../../../assets/hero2nd/image10.svg'
-import image11 from '../../../assets/hero2nd/image11.svg'
 import m1 from '../../../assets/hero2nd/mobile/m1.png'
 import m2 from '../../../assets/hero2nd/mobile/m2.png'
 import m3 from '../../../assets/hero2nd/mobile/m3.png'
@@ -24,7 +21,7 @@ import Marquee from 'react-fast-marquee'
 
 const OurClient = () => {
     return (
-        <div className='max-w-fit mx-auto overflow-hidden'>
+        <div className='max-w-11/12 mx-auto overflow-hidden'>
             {/* image section for desktop*/}
             <div className='hidden md:flex justify-center items-center mt-[53px]'>
 
@@ -36,7 +33,10 @@ const OurClient = () => {
                             <img src={image3} alt="" />
                             <img src={image4} alt="" />
                             <img src={image5} alt="" />
-                            <img src={image6} alt="" />
+                            <img src={image5} alt="" />
+                            <img src={image5} alt="" />
+                            <img src={image5} alt="" />
+                            <img src={image5} alt="" />
                         </div>
                     </Marquee>
                     <Marquee direction='right'>
@@ -44,8 +44,14 @@ const OurClient = () => {
                             <img src={image7} alt="" />
                             <img src={image8} alt="" />
                             <img src={image9} alt="" />
-                            <img src={image10} alt="" />
-                            <img src={image11} alt="" />
+                            <img src={image9} alt="" />
+                            <img src={image9} alt="" />
+                            <img src={image9} alt="" />
+                            <img src={image9} alt="" />
+                            <img src={image9} alt="" />
+                            <img src={image9} alt="" />
+                            
+                            
                         </div>
                     </Marquee>
 

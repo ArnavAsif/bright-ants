@@ -26,14 +26,14 @@ const Hero = () => {
     }, []);
 
     return (
-        <div className='mt-2 md:mt-[170px]'>
+        <div className='mt-2 md:mt-[170px] w-11/12 mx-auto'>
             <div className="relative w-full text-white overflow-hidden pt-16 pb-12 md:pb-40 px-6 md:px-12">
-                <div className="max-w-[1344px] mx-auto relative flex flex-col md:flex-row items-start justify-between">
+                <div className="w-11/12 mx-auto relative flex flex-col md:flex-row items-start justify-between">
 
                     {/* Text Section */}
                     <div className="max-w-[739px] z-20">
                         <div>
-                            <div>
+                            <div className='relative z-50'>
                                 <img
                                     src={weDo}
                                     alt="We Do"
@@ -53,8 +53,8 @@ const Hero = () => {
                                     </motion.h2>
                                 </AnimatePresence>
                             </div>
-                            <div className='lg:hidden absolute top-[-70px] left-[120px] md:top-[-160px] md:left-[80px]'>
-                                <img src={ant} alt="" />
+                            <div className='lg:hidden absolute top-[-70px] left-[120px] md:top-[-160px] md:left-[80px] bg-[#1A191C]'>
+                                <img className='w-full h-auto object-contain mix-blend-luminosity' src={ant} alt="" />
                             </div>
                         </div>
 
@@ -70,7 +70,7 @@ const Hero = () => {
                     </div>
 
                     {/* Ant Image */}
-                    <div className=" hidden lg:flex absolute top-[-190px] right-[-80px] w-[822px] max-w-none z-10 pointer-events-none">
+                    <div className=" hidden lg:flex absolute top-[-190px] right-[-80px] w-[822px] max-w-none z-10 pointer-events-none bg-[#1A191C]">
                         <img
 
                             src={ant}
