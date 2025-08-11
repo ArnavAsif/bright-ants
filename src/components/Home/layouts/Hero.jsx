@@ -26,12 +26,12 @@ const Hero = () => {
     }, []);
 
     return (
-        <div className='mt-2 md:mt-[170px] w-11/12 mx-auto'>
-            <div className="relative w-full text-white overflow-hidden pt-16 pb-12 md:pb-40 px-6 md:px-12">
-                <div className="w-11/12 mx-auto relative flex flex-col md:flex-row items-start justify-between">
+        <div className='mt-2 md:mt-[140px] max-w-11/12 mx-auto'>
+            <div className="w-full text-white overflow-hidden pt-16 pb-12 md:pb-40 px-6 md:px-12">
+                <div className=" flex flex-col md:flex-row items-center">
 
                     {/* Text Section */}
-                    <div className="max-w-[739px] z-20">
+                    <div className="max-w-[739px] w-full relative z-20">
                         <div>
                             <div className='relative z-50'>
                                 <img
@@ -53,7 +53,7 @@ const Hero = () => {
                                     </motion.h2>
                                 </AnimatePresence>
                             </div>
-                            <div className='lg:hidden absolute top-[-70px] left-[120px] md:top-[-160px] md:left-[80px] bg-[#1A191C]'>
+                            <div className='md:hidden absolute top-[-70px] left-[120px] md:top-[-160px] md:left-[80px] bg-[#1A191C]'>
                                 <img className='w-full h-auto object-contain mix-blend-luminosity' src={ant} alt="" />
                             </div>
                         </div>
@@ -62,20 +62,20 @@ const Hero = () => {
                             Partnering with BrightAnts means working with a team you love and<br />
                             achieving results you can trust. Efficiently, affordably, and sustainably.
                         </p>
-                        <div className='absolute rounded-full -top-[100px] -left-[90px]'>
-                            <img src={textBg} 
-                            className='rounded-full'
-                            alt="" />
+                        <div className='hidden lg:flex absolute rounded-full -top-[100px] -left-[90px]'>
+                            <img src={textBg}
+                                className='rounded-full'
+                                alt="" />
                         </div>
                     </div>
 
+                    
                     {/* Ant Image */}
-                    <div className=" hidden lg:flex absolute top-[-190px] right-[-80px] w-[822px] max-w-none z-10 pointer-events-none bg-[#1A191C]">
+                    <div className="hidden md:flex overflow-hidden scale-150 z-10 bg-[#1A191C] items-start justify-start pr-14">
                         <img
-
                             src={ant}
                             alt="Hero Ant"
-                            className="w-full h-auto object-contain mix-blend-luminosity"
+                            className="w-full h-auto transform object-contain mix-blend-luminosity"
                         />
                     </div>
                 </div>

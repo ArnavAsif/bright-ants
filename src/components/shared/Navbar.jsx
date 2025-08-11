@@ -47,7 +47,7 @@ const Navbar = () => {
 
     return (
         <nav className="w-full text-white font-figtree py-5 sticky top-0 z-[999] bg-[#1A191C]">
-            <div className="md:w-10/12 mx-auto flex justify-between items-center px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
+            <div className="w-11/12 mx-auto flex justify-between items-center px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
                 <div className="flex items-center gap-3 sm:gap-4 md:gap-5">
                     <button className="lg:hidden" onClick={() => setIsMobileOpen(true)}>
                         <img src={menuIcon} alt="Open Menu" className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
