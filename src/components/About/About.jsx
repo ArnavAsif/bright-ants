@@ -5,6 +5,7 @@ import vision from '../../assets/aboutUs/vision.svg'
 import value from '../../assets/aboutUs/value.svg'
 import ContactSection from '../Home/layouts/PromotionsAndProgress/ContactSection';
 import { useState } from 'react';
+import VideoSection from './VideoSection';
 
 const About = () => {
     const [btn, setBtn] = useState('mission')
@@ -28,24 +29,24 @@ const About = () => {
                         <p className='mt-[10px] '>We understand that legal documents need to be both professional and visually compelling. Our design expertise extends to crafting well-structured, clear, and polished legal briefs that enhance readability and presentation. Whether you need formatting, typography adjustments, or custom branding elements, we ensure that your legal documents maintain a high standard of clarity and professionalism.</p>
                         <hr className='text-[#005DAA] my-[18px]' />
                         {/* buttons */}
-                        <div className='flex gap-5 text-lg/[100%] tracking-normal font-semibold mb-[18px]'>
+                        <div className='flex gap-1 md:gap-5 text-lg/[100%] tracking-normal font-semibold mb-[18px] justify-center items-center'>
                             <button
                                 onClick={() => setBtn('mission')}
-                                className={`px-[30px] py-[7px] rounded-full transition-all ${btn === 'mission' ? 'bg-[#EA1B26] text-white' : 'text-[#EA1B26]'
+                                className={`px-[20.5px] py-[7.5px] md:px-[30px] md:py-[7px] rounded-full transition-all ${btn === 'mission' ? 'bg-[#EA1B26] text-white' : 'text-[#EA1B26]'
                                     }`}
                             >
                                 Mission
                             </button>
                             <button
                                 onClick={() => setBtn('vision')}
-                                className={`px-[30px] py-[7px] rounded-full transition-all ${btn === 'vision' ? 'bg-[#EA1B26] text-white' : 'text-[#EA1B26]'
+                                className={`px-[20.5px] py-[7.5px] md:px-[30px] md:py-[7px] rounded-full transition-all ${btn === 'vision' ? 'bg-[#EA1B26] text-white' : 'text-[#EA1B26]'
                                     }`}
                             >
                                 Vision
                             </button>
                             <button
                                 onClick={() => setBtn('value')}
-                                className={`px-[30px] py-[7px] rounded-full transition-all ${btn === 'value' ? 'bg-[#EA1B26] text-white' : 'text-[#EA1B26]'
+                                className={`px-[20.5px] py-[7.5px] md:px-[30px] md:py-[7px] rounded-full transition-all ${btn === 'value' ? 'bg-[#EA1B26] text-white' : 'text-[#EA1B26]'
                                     }`}
                             >
                                 Our Value
@@ -76,6 +77,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
+            <VideoSection></VideoSection>
             <ContactSection></ContactSection>
         </div>
     );
