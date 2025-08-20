@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useState } from 'react';
+import UpgradeThankYouModal from '../../../shared/UpgradeThankYouModal';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +9,7 @@ const ContactSection = () => {
     email: '',
     message: '',
   });
+  const [showModal, setShowModal] = useState(false);
 
   const [status, setStatus] = useState('');
 
@@ -37,13 +39,17 @@ const ContactSection = () => {
       if (res.ok) {
         setStatus('✅ Email sent successfully!');
         setFormData({ firstname: '', lastname: '', email: '', message: '' });
+
+        // ✅ Show the Thank You modal
+        setShowModal(true);
       } else {
-        setStatus(`❌ ${result.error || 'Something went wrong.'}`);
+        setStatus(`❌'Something went wrong.'}`);
       }
     } catch (err) {
       setStatus('❌ Failed to send email.');
     }
   };
+
 
   return (
     <section id="contact" className=" text-white px-4 py-12">
@@ -150,6 +156,8 @@ const ContactSection = () => {
                 </p>
               )}
             </form>
+            {/* Show Modal */}
+            {showModal && <UpgradeThankYouModal onClose={() => setShowModal(false)} />}
           </div>
         </div>
       </div>

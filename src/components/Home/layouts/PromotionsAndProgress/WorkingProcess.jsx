@@ -13,15 +13,14 @@ const WorkingProcess = () => {
                     Our Working Process
                 </h1>
             </div>
-
-            <div className="max-w-[1310px] mx-auto flex flex-wrap justify-center md:justify-between gap-14 md:gap-8 xl:gap-10 font-figtree">
+            <div className="max-w-[1310px] mx-auto flex flex-col lg:flex-row justify-center md:justify-between gap-14 md:gap-8 xl:gap-10 font-figtree">
                 {/* Card 1 */}
-                <div className="group transition-all duration-500 hover:pt-[60px] w-full sm:w-[410px] md:w-[400px] xl:w-[410px] h-[484px] bg-[linear-gradient(to_bottom_right,rgba(62,53,245,1),rgba(71,255,175,0.8))] text-white px-6 md:px-8 pt-10 relative rounded-lg">
-                    <h3 className="text-[22px]/[100%] font-extrabold mb-[10px]">CONSULTATION</h3>
+                <div className="group transition-all duration-500 hover:pt-[60px] w-full sm:w-[410px] md:w-[400px] xl:w-[410px] h-[484px] bg-[linear-gradient(to_bottom_right,rgba(62,53,245,1),rgba(71,255,175,0.8))] text-white px-5 md:px-8 pt-10 relative rounded-lg">
+                    <h3 className="text-xl/[100%] lg:text-[22px]/[100%] font-extrabold mb-[10px]">CONSULTATION</h3>
                     <p className="text-base leading-[21px] mb-10">
                         We have a detailed conversation with you to fully understand your goals and industry. From there, we conduct thorough market research to guide the process.
                     </p>
-                    <h4 className="text-[22px]/[100%] font-extrabold mb-[10px]">PROPOSAL & AGREEMENT</h4>
+                    <h4 className="text-xl/[100%] lg:text-[22px]/[100%] tracking-normal font-extrabold mb-[10px]">PROPOSAL & AGREEMENT</h4>
                     <p className="text-base leading-[21px]">
                         We provide you with a detailed proposal outlining the project scope, timeline, and costs. Once you're happy and give approval, we'll move forward with a formal agreement.
                     </p>

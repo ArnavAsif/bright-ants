@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import logo from '../../assets/logo.png';
-import mobileLogo from '../../assets/mobile-logo.png';
-import menuIcon from '../../assets/menu-icon.png';
-import closeIcon from '../../assets/close-icon.png';
-import downArrow from '../../assets/dropDown.png';
-import { Link, NavLink, useLocation, useNavigate } from 'react-router'; // Make sure it's 'react-router-dom'
+import logo from '../../assets/logo-pc.svg';
+import mobileLogo from '../../assets/logo-mobile.svg';
+import menuIcon from '../../assets/menu.svg';
+import closeIcon from '../../assets/close.svg';
+import downArrow from '../../assets/drop-down-mobile.svg';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router'; 
 
 const Navbar = () => {
     const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -53,8 +53,8 @@ const Navbar = () => {
                         <img src={menuIcon} alt="Open Menu" className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
                     </button>
 
-                    <img src={logo} alt="Logo" className="h-8 sm:h-9 md:h-10 lg:h-11 xl:h-12 hidden lg:block" />
-                    <img src={mobileLogo} alt="Mobile Logo" className="h-7 sm:h-8 md:h-9 lg:hidden" />
+                    <Link to='/'><img src={logo} alt="Logo" className="h-8 sm:h-9 md:h-10 lg:h-11 xl:h-12 hidden lg:block" /></Link>
+                    <Link to='/'><img src={mobileLogo} alt="Mobile Logo" className="h-7 sm:h-8 md:h-9 lg:hidden" /></Link>
                 </div>
 
                 {/* Desktop Menu */}

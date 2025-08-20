@@ -12,6 +12,7 @@ import WebDesign from "../components/Service/WebDesign";
 import WordPress from "../components/Service/WordPress";
 import Graphics from "../components/Service/Graphics";
 import ServiceHome from "../components/Service/ServiceHome";
+import Offers from "../components/Home/layouts/PromotionsAndProgress/Offers";
 
 
 const router = createBrowserRouter([
@@ -60,7 +61,12 @@ const router = createBrowserRouter([
             element: <WordPress></WordPress>
           }
         ]
+      },
+      {
+        path: 'offers',
+        element: <Offers></Offers>
       }
+
     ]
   },
 ]);

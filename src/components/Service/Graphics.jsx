@@ -6,6 +6,8 @@ import ps from '../../assets/toolsWeuse/ps.svg'
 import ai from '../../assets/toolsWeuse/ai.svg'
 import lr from '../../assets/toolsWeuse/lr.svg'
 import canva from '../../assets/toolsWeuse/canva.svg'
+import WorkingProcess from '../Home/layouts/PromotionsAndProgress/WorkingProcess';
+import { Navigate, useLocation, useNavigate } from 'react-router';
 const items = [
 
     "Logo design",
@@ -16,6 +18,20 @@ const items = [
 ]
 
 const Graphics = () => {
+    const location = useLocation();
+    const navigate = useNavigate();
+    const handleClick = () => {
+        if (location.pathname === '/') {
+
+            const section = document.getElementById('contact');
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        } else {
+            // Navigate to /contact route if not on homepage
+            navigate('/contact');
+        }
+    };
     return (
         <div className='w-11/12 mx-auto pt-[96px] pb-12 relative z-10 overflow-hidden'>
             <div className="hidden lg:block absolute inset-0 max-w-[1173px] mx-auto left-0 right-0 z-0 opacity-60 pointer-events-none">
@@ -49,54 +65,74 @@ const Graphics = () => {
                     </div>
                 </div>
                 <div className='lg:w-1/3 flex justify-center lg:justify-end'>
-                    <img className='w-[60%] lg:w-full' src={graphics} alt="" />
+                    <img className='w-[60%] lg:w-fit' src={graphics} alt="" />
                 </div>
 
             </div>
-            <div className='my-[148px]'>
+            <div className='my-24 lg:my-[148px]'>
                 <SeeOurWork></SeeOurWork>
             </div>
-            <div className='shadow-[4px_4px_8px_0_rgba(0,0,0,0.25)] py-[60px]'>
+            <div className='shadow-[4px_4px_8px_0_rgba(0,0,0,0.25)] py-[60px] mb-24 lg:mb-[148px]'>
                 <div className='max-w-[1075px] mx-auto'>
-                    <h1 className='pb-10'>Tools We use</h1>
-                    <div className="flex justify-center items-center gap-6">
+                    <h1 className='pb-[10px] lg:pb-10'>Tools We use</h1>
+                    <div className="grid grid-cols-2 lg:flex justify-center items-center gap-[30px] p-3 lg:p-0 lg:gap-6">
                         {/* Photoshop */}
-                        <div className="flex items-center gap-5 relative pr-[60px]">
+                        <div className="flex items-center gap-5 relative lg:pr-[60px]">
 
-                            <img src={ps} alt="photoshop" className="w-20 h-20" />
+                            <img src={ps} alt="photoshop" className="w-10 h-10 lg:w-20 lg:h-20" />
                             <p className='font-figtree font-normal text-[14px] md:text-[20px] leading-[120%] tracking-[-0.03em]'>Adobe <br /> Photoshop</p>
 
 
                             {/* Divider */}
-                            <div className="absolute right-0 top-1/2 -translate-y-1/2 h-1/2 border-r-2 border-[#005DAA]"></div>
+                            <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 h-1/2 border-r-2 border-[#005DAA]"></div>
                         </div>
 
                         {/* Illustrator */}
-                        <div className="flex items-center gap-5 relative px-[60px]">
-                            <img src={ai} alt="illustrator" className="w-20 h-20" />
+                        <div className="flex items-center gap-5 relative lg:px-[60px]">
+                            <img src={ai} alt="illustrator" className="w-10 h-10 lg:w-20 lg:h-20" />
                             <p className='font-figtree font-normal text-[14px] md:text-[20px] leading-[120%] tracking-[-0.03em]'>Adobe <br /> Illustrator</p>
 
                             {/* Divider */}
-                            <div className="absolute right-0 top-1/2 -translate-y-1/2 h-1/2 border-r-2 border-[#005DAA]"></div>
+                            <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 h-1/2 border-r-2 border-[#005DAA]"></div>
                         </div>
 
                         {/* Lightroom */}
-                        <div className="flex items-center gap-5 relative px-[60px]">
-                            <img src={lr} alt="lightroom" className="w-20 h-20" />
+                        <div className="flex items-center gap-5 relative lg:px-[60px]">
+                            <img src={lr} alt="lightroom" className="w-10 h-10 lg:w-20 lg:h-20" />
                             <p className='font-figtree font-normal text-[14px] md:text-[20px] leading-[120%] tracking-[-0.03em]'>Adobe <br /> Lightroom</p>
 
                             {/* Divider */}
-                            <div className="absolute right-0 top-1/2 -translate-y-1/2 h-1/2 border-r-2 border-[#005DAA]"></div>
+                            <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 h-1/2 border-r-2 border-[#005DAA]"></div>
                         </div>
 
                         {/* Canva (no divider at the end) */}
-                        <div className="flex items-center gap-5 pl-[60px]">
-                            <img src={canva} alt="canva" className="w-20 h-20" />
+                        <div className="flex items-center gap-5 lg:pl-[60px]">
+                            <img src={canva} alt="canva" className="w-10 h-10 lg:w-20 lg:h-20" />
                             <p className='font-figtree font-normal text-[14px] md:text-[20px] leading-[120%] tracking-[-0.03em]'>Canva</p>
                         </div>
                     </div>
                 </div>
             </div>
+            <WorkingProcess></WorkingProcess>
+            <div className='my-24 lg:my-[148px] py-[60px] shadow-[4px_4px_8px_0_rgba(0,0,0,0.25)]'>
+                <div className=' max-w-[1107px] mx-auto text-center '>
+                    <h1 className='mb-[30px]'>Need Some Help?</h1>
+                    <p>Got a project in mind but not sure where to start? Whether you need a stunning new design, a website revamp, or expert advice on your digital presence, BrightAnts is here to help! Our team of creative professionals is ready to bring your vision to life with innovative design solutions tailored to your needs.</p>
+                    <p>Let's collaborate and create something amazing together. Get in touch today, and let's make your ideas shine!</p>
+                    <div className='mt-10'>
+                        <button
+                            onClick={handleClick}
+                            className="bg-[#EA1B26] text-white font-bold transition-all duration-200
+                 text-xs sm:text-sm md:text-base xl:text-lg 
+                 px-4 py-1.5 sm:px-5 sm:py-2 md:px-6 md:py-2.5 lg:px-7 lg:py-3 
+                 hover:bg-white hover:text-[#EA1B26]"
+                        >
+                            Get a Quote
+                        </button>
+                    </div>
+                </div>
+            </div>
+
         </div>
     );
 };

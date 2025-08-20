@@ -2,6 +2,7 @@
 import redBg from '../../assets/bg-we.png';
 import blueBg from '../../assets/bg-blue.png';
 import { useState } from 'react';
+import UpgradeThankYouModal from '../shared/UpgradeThankYouModal';
 
 const ContactUs = () => {
 
@@ -11,7 +12,7 @@ const ContactUs = () => {
         email: '',
         message: '',
       });
-    
+      const [showModal, setShowModal] = useState(false);
       const [status, setStatus] = useState('');
     
       const handleChange = (e) => {
@@ -40,6 +41,7 @@ const ContactUs = () => {
           if (res.ok) {
             setStatus('✅ Email sent successfully!');
             setFormData({ firstname: '', lastname: '', email: '', message: '' });
+            setShowModal(true)
           } else {
             setStatus(`❌ ${result.error || 'Something went wrong.'}`);
           }
@@ -166,6 +168,8 @@ const ContactUs = () => {
                 </p>
               )}
             </form>
+            {/* Show Modal */}
+            {showModal && <UpgradeThankYouModal onClose={() => setShowModal(false)} />}
           </div>
         </div>
             </div>
