@@ -11,6 +11,7 @@ const services = [
   {
     title: "Graphics Design",
     icon: graphics,
+    link: '/service/graphicsDesign',
     items: [
       "Logo design",
       "Branding and identity design",
@@ -22,6 +23,7 @@ const services = [
   {
     title: "Digital Media Design",
     icon: digital,
+    link: '/service/digitalMediaDesign',
     items: [
       "Social media graphics",
       "Digital marketing materials",
@@ -33,6 +35,7 @@ const services = [
   {
     title: "UI and UX",
     icon: ui,
+    link: '/service/UIandUX',
     items: [
       "Wireframing and prototyping",
       "Interface for web and mobile applications",
@@ -43,6 +46,7 @@ const services = [
   {
     title: "Web Design",
     icon: web,
+    link: '/service/webDesign',
     items: [
       "Partial or full Website design",
       "Design audit",
@@ -54,6 +58,7 @@ const services = [
   {
     title: "WordPress",
     icon: wordpress,
+    link: '/service/wordPress',
     items: [
       "Website Design and Development",
       "WooCommerce Solutions",
@@ -91,7 +96,7 @@ const Teams = () => {
         {/* Right Column */}
         <section className="w-full lg:w-1/2 space-y-8 md:space-y-10 xl:space-y-12">
           {services.map((service, index) => (
-            <Link key={index}>
+            <Link key={index} to={service.link}>
               <div className="bg-[#1C1A1F] p-6 md:p-8 xl:p-10 rounded-lg shadow-[4px_4px_8px_rgba(0,0,0,0.25)] flex flex-col sm:flex-row gap-6 sm:gap-8">
                 
                 {/* Icon */}

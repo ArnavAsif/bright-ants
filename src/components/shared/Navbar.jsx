@@ -4,7 +4,7 @@ import mobileLogo from '../../assets/mobile-logo.png';
 import menuIcon from '../../assets/menu-icon.png';
 import closeIcon from '../../assets/close-icon.png';
 import downArrow from '../../assets/dropDown.png';
-import { NavLink, useLocation, useNavigate } from 'react-router'; // Make sure it's 'react-router-dom'
+import { Link, NavLink, useLocation, useNavigate } from 'react-router'; // Make sure it's 'react-router-dom'
 
 const Navbar = () => {
     const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -47,7 +47,7 @@ const Navbar = () => {
 
     return (
         <nav className="w-full text-white font-figtree py-5 sticky top-0 z-[999] bg-[#1A191C]">
-            <div className="w-11/12 mx-auto flex justify-between items-center px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
+            <div className=" mx-auto flex justify-between items-center px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
                 <div className="flex items-center gap-3 sm:gap-4 md:gap-5">
                     <button className="lg:hidden" onClick={() => setIsMobileOpen(true)}>
                         <img src={menuIcon} alt="Open Menu" className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
@@ -62,7 +62,7 @@ const Navbar = () => {
                     <li><NavLink to="/" className="hover:text-red-500 transition">Home</NavLink></li>
                     <li><NavLink to="/about" className="hover:text-red-500 transition">About Us</NavLink></li>
                     <li><NavLink to="/service" className="hover:text-red-500 transition">Services</NavLink></li>
-                    <li><NavLink to="/blog" className="hover:text-red-500 transition">Blog</NavLink></li>
+                    <li><a href='#' className="hover:text-red-500 transition">Blog</a></li>
                     <li><NavLink to="/contact" className="hover:text-red-500 transition">Contact</NavLink></li>
                 </ul>
 
@@ -115,15 +115,15 @@ const Navbar = () => {
                             </button>
                             {isServicesOpen && (
                                 <ul className="mt-4 space-y-2 font-normal">
-                                    <li><a href="#" onClick={handleCloseMenu} className="hover:text-red-500">Graphics Design</a></li>
-                                    <li><a href="#" onClick={handleCloseMenu} className="hover:text-red-500">Digital Media Design</a></li>
-                                    <li><a href="#" onClick={handleCloseMenu} className="hover:text-red-500">Web Design</a></li>
-                                    <li><a href="#" onClick={handleCloseMenu} className="hover:text-red-500">UI and UX</a></li>
-                                    <li><a href="#" onClick={handleCloseMenu} className="hover:text-red-500">WordPress</a></li>
+                                    <li><Link to="/service/graphicsDesign" onClick={handleCloseMenu} className="hover:text-red-500">Graphics Design</Link></li>
+                                    <li><Link to="/service/digitalMediaDesign" onClick={handleCloseMenu} className="hover:text-red-500">Digital Media Design</Link></li>
+                                    <li><Link to="/service/webDesign" onClick={handleCloseMenu} className="hover:text-red-500">Web Design</Link></li>
+                                    <li><Link to="/service/UIandUX" onClick={handleCloseMenu} className="hover:text-red-500">UI and UX</Link></li>
+                                    <li><Link to="/service/wordPress" onClick={handleCloseMenu} className="hover:text-red-500">WordPress</Link></li>
                                 </ul>
                             )}
                         </li>
-                        <li><NavLink to="/blog" onClick={handleCloseMenu} className="hover:text-red-500">Blog</NavLink></li>
+                        <li><a href='#' onClick={handleCloseMenu} className="hover:text-red-500">Blog</a></li>
                         <li><NavLink to="/contact" onClick={handleCloseMenu} className="hover:text-red-500">Contact</NavLink></li>
                     </ul>
                 </div>

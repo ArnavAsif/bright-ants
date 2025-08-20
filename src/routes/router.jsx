@@ -11,6 +11,7 @@ import UIandUX from "../components/Service/UIandUX";
 import WebDesign from "../components/Service/WebDesign";
 import WordPress from "../components/Service/WordPress";
 import Graphics from "../components/Service/Graphics";
+import ServiceHome from "../components/Service/ServiceHome";
 
 
 const router = createBrowserRouter([
@@ -19,39 +20,43 @@ const router = createBrowserRouter([
     element: <MainPage></MainPage>,
     children: [
       {
-        path: '/',
+        index: true,
         element: <HomePage></HomePage>
       },
       {
-        path: '/about',
+        path: 'about',
         element: <About></About>
       },
       {
-        path: '/contact',
+        path: 'contact',
         element: <ContactUs></ContactUs>
       },
       {
-        path: '/service',
+        path: 'service',
         element: <Service></Service>,
         children: [
           {
-            path: '/service/graphicsDesign',
+            index: true,
+            element: <ServiceHome></ServiceHome>
+          },
+          {
+            path: 'graphicsDesign',
             element: <Graphics></Graphics>
           },
           {
-            path: '/service/digitalMediaDesign',
+            path: 'digitalMediaDesign',
             element: <DigitalMediaDesign></DigitalMediaDesign>
           },
           {
-            path: '/service/UIandUX',
+            path: 'UIandUX',
             element: <UIandUX></UIandUX>
           },
           {
-            path: '/service/webDesign',
+            path: 'webDesign',
             element: <WebDesign></WebDesign>
           },
           {
-            path: '/service/wordPress',
+            path: 'wordPress',
             element: <WordPress></WordPress>
           }
         ]

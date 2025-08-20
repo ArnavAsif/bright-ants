@@ -27,6 +27,33 @@
     }
   }
 }
+@layer base {
+  h2 {
+    font-family: "figtree", sans-serif;
+    font-weight: 800;
+    line-height: 100%;
+    color: #fafafa;
+    letter-spacing: -0.03em;
+    font-size: 30px; /* default (mobile) */
+
+  }
+}
+
+@layer base {
+  h3 {
+    font-family: "figtree", sans-serif;
+    font-weight: 800;
+    line-height: 100%;
+    color: #fff;
+    letter-spacing: -0.03em;
+    font-size: 24px; /* default (mobile) */
+
+    /* Responsive: for medium (md) and up */
+    @media (min-width: 768px) {
+      font-size: 30px;
+    }
+  }
+}
 
 @layer base {
   p {

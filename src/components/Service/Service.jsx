@@ -1,9 +1,11 @@
-import React from 'react';
+import { Outlet } from "react-router";
+import ServiceHome from "./ServiceHome";
 
 const Service = () => {
+
     return (
         <div>
-            this is service
+            <Outlet></Outlet>
         </div>
     );
 };

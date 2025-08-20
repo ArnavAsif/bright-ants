@@ -6,12 +6,13 @@ import value from '../../assets/aboutUs/value.svg'
 import ContactSection from '../Home/layouts/PromotionsAndProgress/ContactSection';
 import { useState } from 'react';
 import VideoSection from './VideoSection';
+import Attorneys from './Attorneys';
 
 const About = () => {
     const [btn, setBtn] = useState('mission')
     return (
         <div className='max-w-[1310px] mx-auto pt-[96px] pb-12 relative z-10 overflow-hidden'>
-            <div className="hidden lg:block absolute inset-0 max-w-[1173px] mx-auto left-0 right-0 z-0 opacity-40 pointer-events-none">
+            <div className="hidden lg:block absolute inset-0 max-w-[1173px] mx-auto left-0 right-0 z-0 opacity-45 pointer-events-none">
                 <div className="grid grid-cols-2 h-full">
                     <img src={redBg} alt="Red BG" className="w-full object-contain" />
                     <img src={blueBg} alt="Blue BG" className="w-full object-contain" />
@@ -19,7 +20,6 @@ const About = () => {
             </div>
             <div className='max-w-[1034px] mx-auto px-[43px] space-y-[10px] relative z-10'>
                 <h1>About Us</h1>
-                <p>We are more than just a creative design agency—we are storytellers, innovators, and problem-solvers. With a team of passionate designers and digital experts, we blend creativity, technology, and strategy to deliver high-impact solutions tailored to your business needs. Whether you're a startup, an established brand, or an entrepreneur looking to make a mark, we're here to turn your ideas into reality</p>
                 <p className='text-center font-bold'>{'Home > About'}</p>
             </div>
             <div className='pt-[48px] pb-[148px] relative z-10'>
@@ -78,6 +78,7 @@ const About = () => {
                 </div>
             </div>
             <VideoSection></VideoSection>
+            <Attorneys></Attorneys>
             <ContactSection></ContactSection>
         </div>
     );
