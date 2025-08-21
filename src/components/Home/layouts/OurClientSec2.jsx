@@ -4,7 +4,7 @@ import colon from '../../../assets/hero2nd/colon.svg';
 const API = "https://bright-ants-backend.onrender.com";
 
 const OurClientSec2 = ({client}) => {
-    console.log(client);
+   
     
     return (
         <div>

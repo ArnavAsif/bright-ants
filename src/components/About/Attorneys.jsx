@@ -8,13 +8,13 @@ const Attorneys = () => {
         fetch(`${API}/attorneys`)
         .then(res => res.json())
         .then(data =>{
-            console.log(data.data)
+           
              setAttorneys(data.data)
             })
     },[])
 
     return (
-        <div className="mb-[162px]">
+        <div className="px-5 lg:px-0 mb-24 lg:mb-[162px]">
             <div>
                 <h1>Let's Meet Our Attorney's</h1>
                 <p className="mt-[7px] text-center">We believe that great design extends to every industry—including the legal field. We collaborate with experienced and highly skilled attorneys who bring expertise, professionalism, and dedication to every case. Our team ensures that legal branding, presentations, and briefs are as polished and compelling as the arguments they support. Meet the legal professionals who are ready to guide, advise, and represent you with confidence and clarity. Expertise, trust, and results—delivered with precision.</p>

@@ -10,6 +10,7 @@ import wordpress from '../../assets/service/wordpress.svg'
 import { useEffect, useState } from 'react'
 import Marquee from 'react-fast-marquee'
 import { Link } from 'react-router'
+import ContactSection from '../Home/layouts/PromotionsAndProgress/ContactSection'
 
 
 const services = [
@@ -162,6 +163,7 @@ const ServiceHome = () => {
                 </div>
 
             </div>
+            {/* why bright ant */}
             <div className='flex flex-col lg:flex-row justify-center items-center shadow-[4px_4px_8px_0_rgba(0,0,0,0.25)] py-[30px] lg:py-10 px-[17px] lg:px-[60px] mb-36 '>
                 <div className='lg:w-1/2'>
                     <img className='py-16' src={arrow} alt="arrow" />
@@ -195,6 +197,7 @@ const ServiceHome = () => {
                     </div>
                 </div>
             </div>
+            <ContactSection/>
         </div>
     );
 };
