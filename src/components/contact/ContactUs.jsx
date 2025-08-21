@@ -3,6 +3,7 @@ import redBg from '../../assets/bg-we.png';
 import blueBg from '../../assets/bg-blue.png';
 import { useState } from 'react';
 import UpgradeThankYouModal from '../shared/UpgradeThankYouModal';
+import map from '../../assets/map.svg'
 
 const ContactUs = () => {
 
@@ -69,8 +70,8 @@ const ContactUs = () => {
                 {/* Contact Info */}
                 <div className="flex-1 flex justify-center md:justify-start items-center">
                     <div>
-                        <h2 className="text-[34px] md:text-6xl text-[#FAFAFA] font-extrabold mb-[30px]">Contact Us</h2>
-
+                        <h2 className="lg:hidden text-[34px] md:text-6xl text-[#FAFAFA] font-extrabold mb-[30px]">Contact Us</h2>
+                        <img className='hidden lg:flex mb-[30px] w-fit' src={map} alt="Map" />
                         <div className="flex flex-col md:flex-row gap-10 md:gap-[54px]">
                             {/* Bangladesh Office */}
                             <div className="mb-8">
