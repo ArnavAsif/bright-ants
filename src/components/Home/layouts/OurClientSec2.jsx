@@ -3,9 +3,9 @@ import colon from '../../../assets/hero2nd/colon.svg';
 
 const API = "https://bright-ants-backend.onrender.com";
 
-const OurClientSec2 = ({client}) => {
-   
-    
+const OurClientSec2 = ({ client }) => {
+
+
     return (
         <div>
             <h1 className="hidden md:block font-figtree text-6xl/[64px] font-extrabold text-center text-white mb-[18px]">
@@ -15,17 +15,20 @@ const OurClientSec2 = ({client}) => {
             <div className="flex flex-col-reverse justify-center items-center md:flex-row px-5 md:px-0">
                 {/* Mobile avatar */}
                 <div className="md:hidden font-figtree flex gap-5 justify-center items-center w-[240px] py-[15.5px]">
-                    <img src={`${API}/files/${client.image}`} alt="avatar" />
+                    <div className='w-[57px] h-[57px]'>
+                        <img className='w-full h-full rounded-full object-cover' src={`${API}/files/${client.image}`} alt="avatar" />
+                    </div>
                     <div>
-                        <h3 className="text-base/[100%] mb-[10px] font-extrabold text-[#FAFAFA]">
-                            Mate Varju
+                        <h3 className="text-base/[100%] tracking-[-3%] mb-[5px] font-bold text-[#FAFAFA]">
+                            {client.name}
                         </h3>
-                        <p className="text-base/[100%] text-[#FAFAFA]">Front End Developer</p>
+                        <p className="mb-[5px] leading-[100%] text-[#FAFAFA]">{client.designation}</p>
+                        <p className="text-[#FAFAFA] leading-[100%]">{client.company}</p>
                     </div>
                 </div>
 
                 {/* Desktop avatar */}
-                <div className="hidden md:flex flex-col justify-center items-center w-[250px] px-3 font-figtree">
+                <div className="hidden lg:flex flex-col justify-center items-center w-[250px] px-3 font-figtree">
                     <div className='w-[57px] h-[57px]'>
                         <img className='w-full h-full rounded-full object-cover' src={`${API}/files/${client.image}`} alt="avatar" />
                     </div>
@@ -41,7 +44,7 @@ const OurClientSec2 = ({client}) => {
                     <p className="text-[#D8D8D8]">
                         {client.content}
                     </p>
-                    
+
                 </div>
             </div>
         </div>

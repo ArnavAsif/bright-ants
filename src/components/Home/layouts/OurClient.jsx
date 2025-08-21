@@ -59,7 +59,7 @@ const OurClient = () => {
                         </div>
                     </Marquee>
                     <Marquee gradient={false} direction="right">
-                        <div className="flex h-[191px] mb-[35px]">
+                        <div className="flex h-[191px]">
                             {renderMarqueeImages(imagesRow2)}
                         </div>
                     </Marquee>
@@ -74,14 +74,14 @@ const OurClient = () => {
                     </div>
                 </Marquee>
                 <Marquee gradient={false} direction="right">
-                    <div className="flex h-[100px] mb-[35px]">
+                    <div className="flex h-[100px]">
                         {renderMarqueeImages(imagesRow2)}
                     </div>
                 </Marquee>
             </div>
 
             {/* Testimonials */}
-            <div className="flex flex-col justify-center items-center md:w-[938px] mx-auto pt-12 md:py-[147px]">
+            <div className="flex flex-col justify-center items-center lg:w-[938px] mx-auto pt-12 md:py-[147px]">
                 {clients.length > 0 && (
                     <OurClientSec2 key={clients[activeIndex].id} client={clients[activeIndex]} />
                 )}
