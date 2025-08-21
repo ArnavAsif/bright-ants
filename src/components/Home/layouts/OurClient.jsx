@@ -33,7 +33,7 @@ const OurClient = () => {
 
         const interval = setInterval(() => {
             setActiveIndex((prevIndex) => (prevIndex + 1) % clients.length);
-        }, 3000); // 3 seconds
+        }, 5000); // 5 seconds
 
         return () => clearInterval(interval); // Clear on unmount
     }, [clients]);
