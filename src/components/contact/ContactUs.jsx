@@ -59,18 +59,18 @@ const ContactUs = () => {
                     <img src={blueBg} alt="Blue BG" className="w-full object-contain" />
                 </div>
             </div>
-            <div className='max-w-[1034px] mx-auto pb-12 relative'>
+            <div className='max-w-[1034px] mx-auto pb-12 relative z-10'>
                 <h1 className='text-[34px]/[64px] lg:text-6xl/[64px] font-extrabold text-center tracking-[-3%] font-figtree'>Contact Us</h1>
                 <p className='font-mulish lg:text-lg/[24px] tracking-[0%] text-center my-[10px]'>
                     Have a question or need a creative solution for your brand? We're here to help! Whether you're looking for graphic design, web development, UI/UX services, or digital media design, our team is ready to bring your vision to life. Fill out the contact form below or reach out directly—we'd love to hear from you! Let's create something amazing together.
                 </p>
                 <p className='text-[#D8D8D8] font-mulish lg:text-lg/[24px] tracking-[0%] font-bold text-center'>{'Home > contact'}</p>
             </div>
-            <div className="max-w-[1173px] mx-auto flex flex-col lg:flex-row lg:justify-between justify-center items-center gap-10">
+            <div className="max-w-[1173px] mx-auto flex flex-col lg:flex-row lg:justify-between justify-center items-center gap-10 relative z-10">
                 {/* Contact Info */}
                 <div className="flex-1 flex justify-center md:justify-start items-center">
                     <div>
-                        <h2 className="lg:hidden text-[34px] md:text-6xl text-[#FAFAFA] font-extrabold mb-[30px]">Contact Us</h2>
+                        <h2 className="lg:hidden text-[34px] md:text-6xl text-[#FAFAFA] font-extrabold  mb-[30px]">Contact Us</h2>
                         <img className='hidden lg:flex mb-[30px] w-fit' src={map} alt="Map" />
                         <div className="flex flex-col md:flex-row gap-10 md:gap-[54px]">
                             {/* Bangladesh Office */}
