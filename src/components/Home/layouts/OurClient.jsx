@@ -68,8 +68,16 @@ const OurClient = () => {
 
             {/* Mobile Marquees */}
             <div className="md:hidden overflow-hidden mt-[53px]">
-                <Marquee>{renderMarqueeImages(imagesRow1)}</Marquee>
-                <Marquee direction="right">{renderMarqueeImages(imagesRow2)}</Marquee>
+                <Marquee gradient={false}>
+                    <div className="flex h-[100px] mb-[35px]">
+                        {renderMarqueeImages(imagesRow1)}
+                    </div>
+                </Marquee>
+                <Marquee gradient={false} direction="right">
+                    <div className="flex h-[100px] mb-[35px]">
+                        {renderMarqueeImages(imagesRow2)}
+                    </div>
+                </Marquee>
             </div>
 
             {/* Testimonials */}
@@ -83,11 +91,10 @@ const OurClient = () => {
                     {clients.map((_, idx) => (
                         <button
                             key={idx}
-                            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                                idx === activeIndex
+                            className={`w-3 h-3 rounded-full transition-all duration-300 ${idx === activeIndex
                                     ? 'bg-white scale-125'
                                     : 'bg-gray-400'
-                            }`}
+                                }`}
                             onClick={() => setActiveIndex(idx)}
                         ></button>
                     ))}
