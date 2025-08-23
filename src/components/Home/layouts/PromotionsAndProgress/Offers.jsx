@@ -5,6 +5,7 @@ import promo from '../../../../assets/promotional-offers/logo.svg'
 import vector from '../../../../assets/service/Vector.svg'
 import arrow from '../../../../assets/service/arrow.svg'
 import ContactSection from './ContactSection';
+import Offer from './Offer';
 
 const API = "https://bright-ants-backend.onrender.com";
 
@@ -148,8 +149,8 @@ const Offers = () => {
         </div>
       </div>
       {/* offer section */}
-      <div>
-
+      <div className='my-24 lg:mt-[60px] lg:mb-[148px]'>
+            <Offer></Offer>
       </div>
       {/* why bright ants */}
       <div className='flex flex-col lg:flex-row justify-center items-center shadow-[4px_4px_8px_0_rgba(0,0,0,0.25)] py-[30px] lg:py-10 px-[17px] lg:px-[60px] mb-36 '>
