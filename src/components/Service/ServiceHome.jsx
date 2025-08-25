@@ -108,7 +108,7 @@ const ServiceHome = () => {
                         <Link key={index} to={service.link}>
                             <div
                                 
-                                className={`bg-[#1C1A1F] p-6 md:p-8 xl:p-10 rounded-lg shadow-[4px_4px_8px_rgba(0,0,0,0.25)] flex flex-col sm:flex-row gap-6 sm:gap-8 ${index % 2 !== 0 ? 'sm:flex-row-reverse' : ''
+                                className={`bg-[#1C1A1F] p-6 mb-12 md:p-8 xl:p-10 rounded-lg shadow-[4px_4px_8px_rgba(0,0,0,0.25)] flex flex-col sm:flex-row gap-6 sm:gap-8 ${index % 2 !== 0 ? 'sm:flex-row-reverse' : ''
                                     }`}
                             >
                                 {/* Icon */}

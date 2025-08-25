@@ -32,7 +32,7 @@ const UIandUX = () => {
         }
     };
     return (
-        <div className='w-11/12 mx-auto pt-[96px] pb-12 relative z-10 overflow-hidden'>
+        <div className='max-w-[1310px] mx-auto pt-[96px] pb-12 relative z-10 overflow-hidden'>
             <div className="hidden lg:block absolute inset-0 max-w-[1173px] mx-auto left-0 right-0 z-0 opacity-75 pointer-events-none">
                 <div className="grid grid-cols-2 h-full">
                     <img src={redBg} alt="Red BG" className="w-full object-contain" />

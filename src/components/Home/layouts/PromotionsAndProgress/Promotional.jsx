@@ -33,9 +33,8 @@ const PromoBlock = ({ title, description, images = [], reverse = false }) => {
       initial={{ opacity: 0, y: 50 }}
       animate={controls}
       transition={{ duration: 0.8, ease: 'easeOut' }}
-      className={`rounded-[12px] flex flex-col ${
-        reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'
-      } items-center justify-between gap-8 p-5 lg:p-[58px] ${reverse ? 'bg-[#0D0D11]' : ''}`}
+      className={`rounded-[12px] flex flex-col ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'
+        } items-center justify-between gap-8 mt-10 lg:p-[58px] ${reverse ? 'bg-[#0D0D11]' : ''}`}
     >
       {/* Image with arrows */}
       <div className="lg:w-[540px] w-full px-4 md:px-0 py-6 relative">
@@ -71,8 +70,8 @@ const PromoBlock = ({ title, description, images = [], reverse = false }) => {
       </div>
 
       {/* Text Content */}
-      <div className="lg:w-1/2 w-full text-center lg:text-left">
-        <h2 className="text-white text-3xl md:text-5xl lg:text-6xl tracking-[-0.03em] font-extrabold font-figtree leading-tight whitespace-pre-line">
+      <div className={`lg:w-1/2 w-full text-center lg:text-${reverse ? 'start' : 'end'}`}>
+        <h2 className="font-figtree font-extrabold text-[34px] leading-[100%] tracking-[-0.03em] lg:text-[60px] lg:leading-[65px]">
           {title}
         </h2>
 
@@ -111,7 +110,7 @@ const PromoSection = () => {
   }, []);
 
   return (
-    <section className="container mx-auto px-4 text-white rounded-lg mb-[100px]">
+    <section className="w-[295px] md:w-auto lg:w-[1310px] mx-auto text-white rounded-lg mb-[100px] overflow-hidden">
       {/* Logo */}
       <Link to="offers">
         <div className="flex justify-center items-center mb-10">

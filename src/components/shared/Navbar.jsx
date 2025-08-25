@@ -4,7 +4,7 @@ import mobileLogo from '../../assets/logo-mobile.svg';
 import menuIcon from '../../assets/menu.svg';
 import closeIcon from '../../assets/close.svg';
 import downArrow from '../../assets/drop-down-mobile.svg';
-import { Link, NavLink, useLocation, useNavigate } from 'react-router'; 
+import { Link, NavLink, useLocation, useNavigate } from 'react-router';
 
 const Navbar = () => {
     const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -15,8 +15,8 @@ const Navbar = () => {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        if (location.pathname === '/' ) {
-            
+        if (location.pathname === '/') {
+
             const section = document.getElementById('contact');
             if (section) {
                 section.scrollIntoView({ behavior: 'smooth' });
@@ -46,8 +46,8 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="w-full text-white font-figtree py-5 sticky top-0 z-[999] bg-[#1A191C]">
-            <div className=" mx-auto flex justify-between items-center px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
+        <nav className="max-w-[1344px] font-figtree py-5 sticky top-0 z-[999] bg-[#1A191C] mx-auto">
+            <div className=" mx-auto flex justify-between items-center">
                 <div className="flex items-center gap-3 sm:gap-4 md:gap-5">
                     <button className="lg:hidden" onClick={() => setIsMobileOpen(true)}>
                         <img src={menuIcon} alt="Open Menu" className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
@@ -59,12 +59,53 @@ const Navbar = () => {
 
                 {/* Desktop Menu */}
                 <ul className="hidden lg:flex gap-6 xl:gap-10 text-xs sm:text-sm md:text-base tracking-wide uppercase">
-                    <li><NavLink to="/" className="hover:text-red-500 transition">Home</NavLink></li>
-                    <li><NavLink to="/about" className="hover:text-red-500 transition">About Us</NavLink></li>
-                    <li><NavLink to="/service" className="hover:text-red-500 transition">Services</NavLink></li>
-                    <li><a href='#' className="hover:text-red-500 transition">Blog</a></li>
-                    <li><NavLink to="/contact" className="hover:text-red-500 transition">Contact</NavLink></li>
+                    <li>
+                        <NavLink
+                            to="/"
+                            className={({ isActive }) =>
+                                isActive ? 'text-red-500' : 'hover:text-red-500 transition text-white'
+                            }
+                        >
+                            Home
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/about"
+                            className={({ isActive }) =>
+                                isActive ? 'text-red-500 transition' : 'hover:text-red-500 transition text-white'
+                            }
+                        >
+                            About Us
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/service"
+                            className={({ isActive }) =>
+                                isActive ? 'text-red-500 transition' : 'hover:text-red-500 transition text-white'
+                            }
+                        >
+                            Services
+                        </NavLink>
+                    </li>
+                    <li>
+                        <a href="#" className="hover:text-red-500 transition text-white">
+                            Blog
+                        </a>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/contact"
+                            className={({ isActive }) =>
+                                isActive ? 'text-red-500 transition' : 'hover:text-red-500 transition text-white'
+                            }
+                        >
+                            Contact
+                        </NavLink>
+                    </li>
                 </ul>
+
 
                 {/* CTA Button */}
                 <div>

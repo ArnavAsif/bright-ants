@@ -49,7 +49,7 @@ const OurClient = () => {
         ));
 
     return (
-        <div className="w-11/12 mx-auto overflow-hidden">
+        <div className="max-w-[1310px] mx-auto overflow-hidden">
             {/* Desktop Marquees */}
             <div className="hidden md:flex justify-center items-center mt-[53px]">
                 <div>
