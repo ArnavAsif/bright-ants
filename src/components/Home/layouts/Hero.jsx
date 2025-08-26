@@ -68,11 +68,11 @@ const Hero = () => {
             </div>
 
             {/* Ant Image (Desktop) */}
-            <div className="flex overflow-hidden lg:scale-120 z-10 bg-[#1A191C] items-start lg:justify-start justify-end pr-5 lg:pr-14 max-w-[500px] w-full">
+            <div className="flex overflow-hidden lg:scale-130 z-10 bg-[#1A191C] items-start lg:justify-start justify-end pr-5 lg:pr-14 max-w-[500px] w-full">
                 <img
                     src={ant}
                     alt="Hero Ant"
-                    className="w-[70%] lg:w-full h-auto scale-120 object-contain mix-blend-luminosity"
+                    className="w-[70%] lg:w-full h-auto scale-130 object-contain mix-blend-luminosity"
                 />
             </div>
         </div>
