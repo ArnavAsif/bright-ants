@@ -75,9 +75,11 @@ const Teams = () => {
         {/* Left Column */}
         <div className="w-full lg:w-[461px] lg:sticky lg:top-20 lg:self-start">
           <div className="max-w-[480px] w-full text-center lg:text-start mx-auto lg:mx-0">
-            <h1 className="font-figtree font-extrabold text-[34px] md:text-[44px] xl:text-[54px] 2xl:text-[64px] leading-[120%] tracking-[-0.03em] text-white">
-              What Our <br /> Team Offers:
-            </h1>
+            <Link to="/service">
+              <h1 className="font-figtree font-extrabold text-[34px] md:text-[44px] xl:text-[54px] 2xl:text-[64px] leading-[120%] tracking-[-0.03em] text-white cursor-pointer">
+                What Our <br /> Team Offers:
+              </h1>
+            </Link>
             <p className="font-mulish text-[18px] md:text-[20px] xl:text-[22px] text-[#D8D8D8] mt-6 mb-8 leading-[28px] md:leading-[30px]">
               As your design partner, we offer tailored, cost-efficient design
               solutions — whether for ongoing support or specific projects — so

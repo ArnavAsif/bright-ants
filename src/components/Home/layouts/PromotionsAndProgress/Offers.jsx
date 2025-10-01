@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
-import redBg from '../../../../assets/bg-we.png'
-import blueBg from '../../../../assets/bg-blue.png'
-import promo from '../../../../assets/promotional-offers/logo.svg'
-import vector from '../../../../assets/service/Vector.svg'
-import arrow from '../../../../assets/service/arrow.svg'
-import ContactSection from './ContactSection';
-import Offer from './Offer';
+import { useEffect, useState } from "react";
+import redBg from "../../../../assets/bg-we.png";
+import blueBg from "../../../../assets/bg-blue.png";
+import promo from "../../../../assets/promotional-offers/logo.svg";
+import vector from "../../../../assets/service/Vector.svg";
+import arrow from "../../../../assets/service/arrow.svg";
+import ContactSection from "./ContactSection";
+import Offer from "./Offer";
 
 const API = "https://bright-ants-backend.onrender.com";
 
@@ -33,43 +33,58 @@ const Offers = () => {
   const activeOffer = offersData[activeIndex];
 
   if (isLoading) {
-    return <div className="text-center text-white py-20">Loading offers...</div>;
+    return (
+      <div className="text-center text-white py-20">Loading offers...</div>
+    );
   }
 
   if (!offersData.length) {
-    return <div className="text-center text-white py-20">No promotional offers available.</div>;
+    return (
+      <div className="text-center text-white py-20">
+        No promotional offers available.
+      </div>
+    );
   }
 
   return (
-    <div className='max-w-[1310px] mx-auto pt-12 lg:pt-[96px] pb-12 relative z-10 overflow-hidden'>
+    <div className="max-w-[1310px] mx-auto pt-12 lg:pt-[96px] pb-12 relative z-10 overflow-hidden">
       <div className="hidden lg:block absolute inset-0 max-w-[1173px] mx-auto left-0 right-0 z-0 opacity-70 pointer-events-none">
         <div className="grid grid-cols-2 h-full">
           <img src={redBg} alt="Red BG" className="w-full object-contain" />
           <img src={blueBg} alt="Blue BG" className="w-full object-contain" />
         </div>
       </div>
-      <div className='relative z-10 justify-center flex flex-col items-center px-5 lg:px-0'>
-        <img className='w-[335px] lg:w-[707px]' src={promo} alt="promoLogo" />
-        <p className='text-center pt-5'>Unlock amazing deals with BrightAnts' special promotional offers! We create visually stunning, conversion-optimized <br className='hidden lg:block' /> product images that grab attention and drive more sales. We have limited-time discounts and exclusive packages tailored to <br className='hidden lg:block' /> your needs.</p>
+      <div className="relative z-10 justify-center flex flex-col items-center px-5 lg:px-0">
+        <img className="w-[335px] lg:w-[707px]" src={promo} alt="promoLogo" />
+        <p className="text-center pt-5">
+          Unlock amazing deals with BrightAnts' special promotional offers! We
+          create visually stunning, conversion-optimized{" "}
+          <br className="hidden lg:block" /> product images that grab attention
+          and drive more sales. We have limited-time discounts and exclusive
+          packages tailored to <br className="hidden lg:block" /> your needs.
+        </p>
       </div>
       <div className="lg:bg-[rgba(32,33,35,1)] px-4 lg:my-[60px] pt-[35px] lg:pt-[30px] lg:pb-[83px] lg:w-[1308px] mx-auto rounded-[10px]">
-
         {/* Desktop Tabs */}
         <div className="hidden lg:grid grid-cols-4 gap-4 mb-[78px] w-full max-w-full text-lg font-bold">
           {offersData.map((_, index) => (
             <button
               key={index}
               onClick={() => setActiveIndex(index)}
-              className={`w-full text-center py-5 relative transition-all duration-300 ${activeIndex === index
-                ? 'text-white'
-                : 'text-gray-400 hover:text-white'
-                }`}
+              className={`w-full text-center py-5 relative transition-all duration-300 ${
+                activeIndex === index
+                  ? "text-white"
+                  : "text-gray-400 hover:text-white"
+              }`}
             >
               Promotional Offer {index + 1}
               {/* Underline border transition */}
               <span
-                className={`absolute bottom-0 left-1/4 h-[2px] w-1/3 bg-[rgba(0,93,170,1)] transition-all duration-300 ${activeIndex === index ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
-                  }`}
+                className={`absolute bottom-0 left-1/4 h-[2px] w-1/3 bg-[rgba(0,93,170,1)] transition-all duration-300 ${
+                  activeIndex === index
+                    ? "opacity-100 scale-x-100"
+                    : "opacity-0 scale-x-0"
+                }`}
               ></span>
             </button>
           ))}
@@ -89,7 +104,9 @@ const Offers = () => {
             <h1 className="mb-6 lg:text-start text-center leading-[100%] lg:leading-16">
               {activeOffer.title}
             </h1>
-            <p className="text-center lg:text-start">{activeOffer.description}</p>
+            <p className="text-center lg:text-start">
+              {activeOffer.description}
+            </p>
           </div>
 
           {/* Images Section */}
@@ -141,44 +158,51 @@ const Offers = () => {
               <button
                 key={idx}
                 onClick={() => setActiveIndex(idx)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${idx === activeIndex ? 'bg-white' : 'bg-gray-500 opacity-50'
-                  }`}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  idx === activeIndex ? "bg-white" : "bg-gray-500 opacity-50"
+                }`}
               />
             ))}
           </div>
         </div>
       </div>
       {/* offer section */}
-      <div className='my-24 lg:mt-[60px] lg:mb-[148px]'>
-            <Offer></Offer>
+      <div className="my-24 lg:mt-[60px] lg:mb-[148px]">
+        <Offer></Offer>
       </div>
       {/* why bright ants */}
-      <div className='flex flex-col lg:flex-row justify-center items-center shadow-[4px_4px_8px_0_rgba(0,0,0,0.25)] py-[30px] lg:py-10 px-[17px] lg:px-[60px] mb-36 '>
-        <div className='lg:w-1/2'>
-          <img className='py-16' src={arrow} alt="arrow" />
+      <div className="flex flex-col lg:flex-row justify-center items-center bg-[#1C1A1F] shadow-[4px_4px_8px_0_rgba(0,0,0,0.25)] py-[30px] lg:py-10 px-[17px] lg:px-[60px] mb-36 rounded-[12px]">
+        <div className="lg:w-1/2">
+          <img className="py-16" src={arrow} alt="arrow" />
         </div>
-        <div className='lg:w-1/2'>
+        <div className="lg:w-1/2">
           <h1>Why BrightAnts?</h1>
-          <p className='py-[22px] text-center lg:text-start'>We don't just design—we create experiences that captivate, engage, and inspire. Our team of passionate creatives and strategic thinkers is dedicated to delivering high-quality design solutions that set your brand apart. Whether it's branding, web design, digital media, or UI/UX, we bring innovation and expertise to every project.</p>
-          <div className=' flex flex-col justify-center items-center lg:items-start lg:justify-start'>
-            <div className='space-y-[10px]'>
-              <div className='flex gap-2 items-center'>
+          <p className="py-[22px] text-center lg:text-start">
+            We don't just design—we create experiences that captivate, engage,
+            and inspire. Our team of passionate creatives and strategic thinkers
+            is dedicated to delivering high-quality design solutions that set
+            your brand apart. Whether it's branding, web design, digital media,
+            or UI/UX, we bring innovation and expertise to every project.
+          </p>
+          <div className=" flex flex-col justify-center items-center lg:items-start lg:justify-start">
+            <div className="space-y-[10px]">
+              <div className="flex gap-2 items-center">
                 <img src={vector} alt="vector" />
                 <p>Creative Excellence</p>
               </div>
-              <div className='flex gap-2 items-center'>
+              <div className="flex gap-2 items-center">
                 <img src={vector} alt="vector" />
                 <p>Tailored Solutions</p>
               </div>
-              <div className='flex gap-2 items-center'>
+              <div className="flex gap-2 items-center">
                 <img src={vector} alt="vector" />
                 <p>User-Centered Design</p>
               </div>
-              <div className='flex gap-2 items-center'>
+              <div className="flex gap-2 items-center">
                 <img src={vector} alt="vector" />
                 <p>Cutting-Edge Innovation</p>
               </div>
-              <div className='flex gap-2 items-center'>
+              <div className="flex gap-2 items-center">
                 <img src={vector} alt="vector" />
                 <p>Reliable & Collaborative</p>
               </div>

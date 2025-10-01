@@ -10,7 +10,7 @@ const MainPage = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
   return (
-    <div className="bg-[#1A191C]">
+    <div className="bg-[#1A191C] scroll-smooth">
       <Navbar></Navbar>
       <Outlet></Outlet>
       <Footer></Footer>
