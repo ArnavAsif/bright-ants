@@ -55,7 +55,7 @@ const Graphics = () => {
             </p>
           </div>
 
-          <div className="flex gap-2 flex-wrap mt-12 justify-center items-center lg:justify-start lg:items-start">
+          {/* <div className="flex gap-2 flex-wrap mt-12 justify-center items-center lg:justify-start lg:items-start">
             {items.map((item, i) => (
               <div
                 key={i}
@@ -66,7 +66,21 @@ const Graphics = () => {
                 </button>
               </div>
             ))}
+          </div> */}
+          {/* chat gpt */}
+          <div className="flex gap-2 flex-wrap mt-12 justify-center items-center lg:justify-start lg:items-start">
+            {items.map((item, i) => (
+              <div key={i} className="relative rounded-full p-[2px] group">
+                {/* Gradient border layer */}
+                <div className="absolute inset-0 rounded-full p-[2px] bg-gradient-to-r from-[#2B70EA] to-[#EA0B24] opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out" />
+                {/* Inner button (content always above) */}
+                <button className="relative bg-[#262628] text-[#FAFAFA] text-[16px] md:text-[16px] xl:text-[18px] px-4 py-2 rounded-full font-mulish transition-all duration-700 ease-in-out">
+                  {item}
+                </button>
+              </div>
+            ))}
           </div>
+          {/* chat gpt */}
         </div>
         <div className="lg:w-1/3 flex justify-center lg:justify-end">
           <img className="w-[60%] lg:w-fit" src={graphics} alt="" />

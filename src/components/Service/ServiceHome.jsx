@@ -108,7 +108,7 @@ const ServiceHome = () => {
           {services.map((service, index) => (
             <Link key={index} to={service.link}>
               <div
-                className={`bg-[#1C1A1F] p-6 mb-12 md:p-8 xl:p-10 rounded-lg shadow-[4px_4px_8px_rgba(0,0,0,0.25)] flex flex-col sm:flex-row gap-6 sm:gap-8 ${
+                className={`bg-[#1C1A1F] hover:bg-[#191B24] p-6 mb-12 md:p-8 xl:p-10 rounded-lg shadow-[4px_4px_8px_rgba(0,0,0,0.25)] flex flex-col sm:flex-row gap-6 sm:gap-8 ${
                   index % 2 !== 0 ? "sm:flex-row-reverse" : ""
                 }`}
               >
@@ -132,13 +132,16 @@ const ServiceHome = () => {
                     </p>
                   </div>
 
-                  <div className="flex flex-wrap gap-[10px] justify-center sm:justify-start">
+                  <div className="flex flex-wrap gap-[10px] mt-4 justify-center sm:justify-start">
                     {service.items.map((item, i) => (
                       <div
                         key={i}
-                        className="rounded-full p-[2px] bg-transparent hover:bg-gradient-to-r hover:from-[#2B70EA] hover:to-[#EA0B24] transition-all duration-300"
+                        className="relative rounded-full p-[2px] group"
                       >
-                        <button className="bg-[#262628] text-[#FAFAFA] text-[16px] md:text-[16px] xl:text-[18px] px-4 py-2 rounded-full font-mulish  transition-all duration-300">
+                        {/* Gradient border layer */}
+                        <div className="absolute inset-0 rounded-full p-[2px] bg-gradient-to-r from-[#2B70EA] to-[#EA0B24] opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out" />
+                        {/* Inner button (content always above) */}
+                        <button className="relative bg-[#262628] text-[#FAFAFA] text-[16px] md:text-[16px] xl:text-[18px] px-4 py-2 rounded-full font-mulish transition-all duration-700 ease-in-out">
                           {item}
                         </button>
                       </div>
