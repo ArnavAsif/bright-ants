@@ -73,13 +73,12 @@ const Teams = () => {
     <div className="relative max-w-[1344px] mx-auto">
       <div className="relative w-full mx-auto py-16 px-4 flex flex-col lg:flex-row lg:justify-between gap-10 md:gap-16 lg:gap-[124px] z-20">
         {/* Left Column */}
-        <div className="w-full lg:w-[461px] lg:sticky lg:top-20 lg:self-start">
+        <div className="w-full lg:w-[461px] lg:sticky lg:top-40 lg:self-start">
           <div className="max-w-[480px] w-full text-center lg:text-start mx-auto lg:mx-0">
-            <Link to="/service">
-              <h1 className="font-figtree font-extrabold text-[34px] md:text-[44px] xl:text-[54px] 2xl:text-[64px] leading-[120%] tracking-[-0.03em] text-white cursor-pointer">
-                What Our <br /> Team Offers:
-              </h1>
-            </Link>
+            <h1 className="font-figtree font-extrabold text-[34px] md:text-[44px] xl:text-[54px] 2xl:text-[64px] leading-[120%] tracking-[-0.03em] text-white">
+              What Our <br /> Team Offers:
+            </h1>
+
             <p className="font-mulish text-[18px] md:text-[20px] xl:text-[22px] text-[#D8D8D8] mt-6 mb-8 leading-[28px] md:leading-[30px]">
               As your design partner, we offer tailored, cost-efficient design
               solutions — whether for ongoing support or specific projects — so
