@@ -71,7 +71,7 @@ const services = [
 const Teams = () => {
   return (
     <div className="relative max-w-[1344px] mx-auto">
-      <div className="relative w-full mx-auto py-16 px-4 flex flex-col lg:flex-row lg:justify-between gap-10 md:gap-16 lg:gap-[124px] z-20">
+      <div className="relative w-full mx-auto py-16 flex flex-col lg:flex-row lg:justify-between gap-10 md:gap-16 lg:gap-[124px] z-20">
         {/* Left Column */}
         <div className="w-full lg:w-[461px] lg:sticky lg:top-32 lg:self-start">
           <div className="max-w-[480px] w-full text-center lg:text-start mx-auto lg:mx-0">
