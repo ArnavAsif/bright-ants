@@ -25,7 +25,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="mt-2 md:mt-[140px] max-w-[1380px] text-white overflow-hidden lg:pt-16 pb-12 md:pb-40 px-5 lg:px-0  mx-auto flex flex-col-reverse lg:flex-row lg:justify-baseline items-center relative">
+    <div className="mt-2 md:mt-[100px] max-w-[1340px] text-white pb-12 md:pb-20 px-5 lg:px-0  mx-auto flex flex-col-reverse lg:flex-row lg:justify-baseline items-center relative">
       {/* Text Section */}
       <div className="max-w-[739px] w-full relative z-20">
         <div className="relative z-50">
@@ -66,7 +66,7 @@ const Hero = () => {
       </div>
 
       {/* Ant Image (Desktop) */}
-      <div className="relative top-7 md:top-0 flex overflow-hidden lg:scale-150 z-10 bg-[#1A191C] items-start justify-end pr-5 lg:pr-14 max-w-[520px] w-full lg:mb-24 ml-5 lg:ml-0">
+      <div className="relative top-7 lg:left-9 md:top-0 flex lg:scale-140 z-10 bg-[#1A191C] items-start justify-end pr-5 lg:pr-14 max-w-[520px]  w-full lg:mb-24 ml-5 lg:ml-0">
         <img
           src={ant}
           alt="Hero Ant"
