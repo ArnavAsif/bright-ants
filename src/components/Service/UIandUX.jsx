@@ -61,9 +61,9 @@ const UIandUX = () => {
             {items.map((item, i) => (
               <div key={i} className="relative rounded-full p-[2px] group">
                 {/* Gradient border layer */}
-                <div className="absolute inset-0 rounded-full p-[2px] bg-gradient-to-r from-[#2B70EA] to-[#EA0B24] opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out" />
+                <div className="absolute inset-0 rounded-full p-[2px] bg-gradient-to-r from-[#2B70EA] to-[#EA0B24] opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out" />
                 {/* Inner button (content always above) */}
-                <button className="relative bg-[#262628] text-[#FAFAFA] text-[16px] md:text-[16px] xl:text-[18px] px-4 py-2 rounded-full font-mulish transition-all duration-700 ease-in-out">
+                <button className="relative bg-[#262628] text-[#FAFAFA] text-[16px] md:text-[16px] xl:text-[18px] px-4 py-2 rounded-full font-mulish transition-all duration-500 ease-in">
                   {item}
                 </button>
               </div>

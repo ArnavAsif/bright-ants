@@ -39,6 +39,36 @@ const PromoBlock = ({ title, description, images = [], reverse = false }) => {
         reverse ? "bg-[#111013] shadow-[4px_4px_8px_0_rgba(0,0,0,0.25)]" : ""
       }`}
     >
+      {/* Text Content */}
+      <div
+        className={`lg:w-[590px] w-full text-center ${
+          reverse ? "lg:text-end" : "lg:text-start"
+        }`}
+      >
+        <h2 className="font-figtree font-extrabold text-[34px] leading-[100%] tracking-[-0.03em] lg:text-[60px] lg:leading-[65px]">
+          {title}
+        </h2>
+
+        <p className="font-mulish font-normal text-[16px] leading-[22px] tracking-[0] text-center lg:text-[18px] lg:leading-[26px] lg:text-justify text-[#D8D8D8] pt-[18px] pb-5">
+          {description}
+        </p>
+
+        <button
+          onClick={() => {
+            document
+              .getElementById("contact")
+              ?.scrollIntoView({ behavior: "smooth" });
+          }}
+          className="bg-[#EA1B26] hover:bg-white hover:text-[#EA1B26] text-white px-6 py-2.5 font-bold text-lg transition-all duration-200"
+        >
+          Get a Quote
+        </button>
+        <Link to="offers">
+          <button className="bg-[#005DAA] hover:bg-[#2374F2]  text-white px-6 py-2.5 font-bold text-lg transition-all duration-200 ml-6">
+            See all Promotional Offers
+          </button>
+        </Link>
+      </div>
       {/* Image with arrows */}
       <div className="lg:w-[540px] w-full px-4 md:px-0 py-6 relative">
         {images.length > 0 && (
@@ -71,32 +101,6 @@ const PromoBlock = ({ title, description, images = [], reverse = false }) => {
           </>
         )}
       </div>
-
-      {/* Text Content */}
-      <div
-        className={`lg:w-[590px] w-full text-center ${
-          reverse ? "lg:text-start" : "lg:text-end"
-        }`}
-      >
-        <h2 className="font-figtree font-extrabold text-[34px] leading-[100%] tracking-[-0.03em] lg:text-[60px] lg:leading-[65px]">
-          {title}
-        </h2>
-
-        <p className="font-mulish font-normal text-[16px] leading-[22px] tracking-[0] text-center lg:text-[18px] lg:leading-[26px] lg:text-justify text-[#D8D8D8] pt-[18px] pb-5">
-          {description}
-        </p>
-
-        <button
-          onClick={() => {
-            document
-              .getElementById("contact")
-              ?.scrollIntoView({ behavior: "smooth" });
-          }}
-          className="bg-[#EA1B26] hover:bg-white hover:text-[#EA1B26] text-white px-6 py-2.5 font-bold text-lg transition-all duration-200"
-        >
-          Get a Quote
-        </button>
-      </div>
     </motion.div>
   );
 };
@@ -121,14 +125,13 @@ const PromoSection = () => {
   return (
     <section className="w-[335px] md:w-auto lg:w-[1340px] mx-auto text-white rounded-lg mb-[100px] overflow-hidden">
       {/* Logo */}
-      <Link to="offers">
-        <div className="flex justify-center items-center mb-10">
-          <img className="w-[80%] lg:w-auto" src={promoLogo} alt="Promo Logo" />
-        </div>
-      </Link>
+
+      <div className="flex justify-center items-center mb-10">
+        <img className="w-[80%] lg:w-auto" src={promoLogo} alt="Promo Logo" />
+      </div>
 
       {/* Dynamic Promo Blocks */}
-      {promos.map((promo, index) => (
+      {promos.slice(0, 1).map((promo, index) => (
         <PromoBlock
           key={promo.id}
           title={promo.title}

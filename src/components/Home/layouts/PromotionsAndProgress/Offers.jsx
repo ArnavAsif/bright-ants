@@ -111,6 +111,19 @@ const Offers = () => {
 
           {/* Images Section */}
           <div className="relative w-[335px] h-[211px] lg:w-[690px] lg:h-[434px] mx-auto lg:mx-0 mt-10 lg:mt-0 pr-9">
+            {/* Always show the first image if it exists */}
+            {activeOffer.images.length >= 1 && (
+              <img
+                src={`${API}/files/${activeOffer.images[0]}`}
+                alt="Main offer"
+                className="absolute object-cover rounded-lg shadow-2xl z-30 w-[200px] h-[211px] 
+                 top-0 left-1/2 -translate-x-1/2 
+                 lg:w-[400px] lg:h-[434px] lg:left-[145px] lg:translate-x-0"
+                onError={(e) => (e.target.src = "/placeholder-image.jpg")}
+              />
+            )}
+
+            {/* Only render side images if 3 are available */}
             {activeOffer.images.length >= 3 && (
               <>
                 {/* Desktop side images */}
@@ -138,14 +151,6 @@ const Offers = () => {
                   src={`${API}/files/${activeOffer.images[2]}`}
                   alt="Right mobile"
                   className="absolute object-cover rounded-lg shadow-lg opacity-50 block lg:hidden w-[100px] h-[180px] top-[15px] right-0"
-                  onError={(e) => (e.target.src = "/placeholder-image.jpg")}
-                />
-
-                {/* Center image */}
-                <img
-                  src={`${API}/files/${activeOffer.images[0]}`}
-                  alt="Main offer"
-                  className="absolute object-cover rounded-lg shadow-2xl z-30 w-[200px] h-[211px] top-0 left-1/2 -translate-x-1/2 lg:w-[400px] lg:h-[434px] lg:left-[145px] lg:translate-x-0"
                   onError={(e) => (e.target.src = "/placeholder-image.jpg")}
                 />
               </>
