@@ -14,7 +14,7 @@ const ContactSection = () => {
     const formData = new FormData(event.target);
 
     formData.append("access_key", "c5b3a1fe-611d-4670-8086-11bf5bd57ccd");
-    formData.append("subject", "🎉 New Project Inquiry from BrightAnts!"); // optional
+    formData.append("subject", "🎉 New Project Inquiry from BrightAnts!");
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {

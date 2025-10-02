@@ -11,10 +11,12 @@ const Footer = () => {
   const [showModal, setShowModal] = useState(false);
   // eslint-disable-next-line no-unused-vars
   const [result, setResult] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    setResult("Sending....");
+    setLoading(true);
+    setResult("");
     const formData = new FormData(event.target);
 
     // Required fields
@@ -23,20 +25,27 @@ const Footer = () => {
     // ✅ Custom subject line
     formData.append("subject", "🎉 Promotional Offer");
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
-    const data = await response.json();
+      const data = await response.json();
 
-    if (data.success) {
-      setResult("Form Submitted Successfully");
-      setShowModal(true);
-      event.target.reset();
-    } else {
-      console.log("Error", data);
-      setResult(data.message);
+      if (data.success) {
+        setResult("Form Submitted Successfully");
+        setShowModal(true);
+        event.target.reset();
+      } else {
+        console.error("Error", data);
+        setResult(data.message || "Failed to submit form");
+      }
+    } catch (error) {
+      console.error("Network error", error);
+      setResult("Network error occurred");
+    } finally {
+      setLoading(false); // Stop loading
     }
   };
 
@@ -160,11 +169,13 @@ const Footer = () => {
                 placeholder="Your Email*"
                 className="p-2 rounded text-black bg-[#D9D9D9] outline-none my-[14px]"
               />
+
               <button
                 type="submit"
+                disabled={loading}
                 className="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 rounded"
               >
-                Submit
+                {loading ? "Submitting" : "Submit"}
               </button>
             </form>
             {showModal && <ThankYouMail onClose={() => setShowModal(false)} />}
