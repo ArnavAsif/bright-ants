@@ -5,10 +5,11 @@ import linkedinIcon from "../../assets/footer/in.svg";
 import twitterIcon from "../../assets/footer/twitter.svg";
 import logo from "../../assets/mobile-logo.png";
 import { Link } from "react-router";
-import UpgradeThankYouModal from "./UpgradeThankYouModal";
+import ThankYouMail from "./ThankYouMail";
 
 const Footer = () => {
   const [showModal, setShowModal] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [result, setResult] = useState("");
 
   const onSubmit = async (event) => {
@@ -166,9 +167,7 @@ const Footer = () => {
                 Submit
               </button>
             </form>
-            {showModal && (
-              <UpgradeThankYouModal onClose={() => setShowModal(false)} />
-            )}
+            {showModal && <ThankYouMail onClose={() => setShowModal(false)} />}
           </div>
         </div>
 
