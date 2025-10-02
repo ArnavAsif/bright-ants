@@ -1,18 +1,18 @@
-import React, { useRef } from 'react';
-import modalImg from '../../assets/modal.svg';
+import React, { useRef } from "react";
+import modalImg from "../../assets/modal.svg";
 
 const UpgradeThankYouModal = ({ onClose }) => {
   const modalRef = useRef();
 
   const handleOverlayClick = (e) => {
     if (modalRef.current && !modalRef.current.contains(e.target)) {
-      onClose(); 
+      onClose();
     }
   };
 
   return (
     <div
-      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm z-50"
+      className="fixed inset-0 flex items-center justify-center bg-transparent bg-opacity-50 backdrop-blur-sm z-50"
       onClick={handleOverlayClick}
     >
       <div
@@ -30,9 +30,12 @@ const UpgradeThankYouModal = ({ onClose }) => {
 
         {/* Content */}
         <div className="text-center px-6 py-8">
-          <h2 className="text-white text-4xl font-extrabold font-[Figtree] mb-4">Thankyou!</h2>
+          <h2 className="text-white text-4xl font-extrabold font-[Figtree] mb-4">
+            Thank you!
+          </h2>
           <p className="text-gray-300 text-base mb-6">
-            We have received your upgrade request.<br />
+            We have received your upgrade request.
+            <br />
             We will reach out to you soon!
           </p>
           <button

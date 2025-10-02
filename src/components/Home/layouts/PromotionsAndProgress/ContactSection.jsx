@@ -67,8 +67,8 @@ const ContactSection = () => {
 
     if (data.success) {
       setResult("Form Submitted Successfully");
-      event.target.reset();
       setShowModal(true);
+      event.target.reset();
     } else {
       console.log("Error", data);
       setResult(data.message);
@@ -157,6 +157,7 @@ const ContactSection = () => {
                   <input
                     type="text"
                     name="firstName"
+                    required
                     className="w-full p-2 rounded bg-[#D9D9D9] text-black outline-none"
                   />
                 </div>
@@ -165,6 +166,7 @@ const ContactSection = () => {
                   <input
                     type="text"
                     name="lastName"
+                    required
                     className="w-full p-2 rounded bg-[#D9D9D9] text-black outline-none"
                   />
                 </div>

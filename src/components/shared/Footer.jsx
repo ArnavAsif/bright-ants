@@ -1,12 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import footerBg from "../../assets/footer/footer.svg";
 import fbIcon from "../../assets/footer/fb.svg";
 import linkedinIcon from "../../assets/footer/in.svg";
 import twitterIcon from "../../assets/footer/twitter.svg";
 import logo from "../../assets/mobile-logo.png";
 import { Link } from "react-router";
+import UpgradeThankYouModal from "./UpgradeThankYouModal";
 
 const Footer = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    // Required fields
+    formData.append("access_key", "c5b3a1fe-611d-4670-8086-11bf5bd57ccd");
+
+    // ✅ Custom subject line
+    formData.append("subject", "🎉 Promotional Offer");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      setShowModal(true);
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
+
   return (
     <footer
       className="text-white py-12"
@@ -119,7 +151,7 @@ const Footer = () => {
             <p className="text-sm mt-5 mb-4">
               Get in touch today, and let's make your ideas shine!
             </p>
-            <form className="flex flex-col gap-2">
+            <form onSubmit={onSubmit} className="flex flex-col gap-2">
               <input
                 type="email"
                 placeholder="Your Email*"
@@ -132,6 +164,9 @@ const Footer = () => {
                 Submit
               </button>
             </form>
+            {showModal && (
+              <UpgradeThankYouModal onClose={() => setShowModal(false)} />
+            )}
           </div>
         </div>
 
