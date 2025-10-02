@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react';
-import { motion, useAnimation, useInView } from 'framer-motion';
-import promoLogo from '../../../../assets/promotional-offers/promotion-logo.svg';
-import { Link } from 'react-router';
+import React, { useEffect, useState } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
+import promoLogo from "../../../../assets/promotional-offers/promotion-logo.svg";
+import { Link } from "react-router";
 
-const API = 'https://bright-ants-backend.onrender.com';
+const API = "https://bright-ants-backend.onrender.com";
 
 const PromoBlock = ({ title, description, images = [], reverse = false }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -32,9 +32,12 @@ const PromoBlock = ({ title, description, images = [], reverse = false }) => {
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={controls}
-      transition={{ duration: 0.8, ease: 'easeOut' }}
-      className={`rounded-[12px] flex flex-col-reverse ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'
-        } items-center p-5 justify-between gap-8 mt-10 lg:p-[58px] ${reverse ? 'bg-[#111013] shadow-[4px_4px_8px_0_rgba(0,0,0,0.25)]' : ''}`}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className={`rounded-[12px] flex flex-col-reverse ${
+        reverse ? "lg:flex-row-reverse" : "lg:flex-row"
+      } items-center p-5 justify-between gap-8 mt-10 lg:p-[58px] ${
+        reverse ? "bg-[#111013] shadow-[4px_4px_8px_0_rgba(0,0,0,0.25)]" : ""
+      }`}
     >
       {/* Image with arrows */}
       <div className="lg:w-[540px] w-full px-4 md:px-0 py-6 relative">
@@ -45,7 +48,7 @@ const PromoBlock = ({ title, description, images = [], reverse = false }) => {
               src={`${API}/files/${images[currentIndex]}`}
               alt={`${title} - ${currentIndex + 1}`}
               className="w-full object-cover h-[197px] lg:h-[362px] max-h-full rounded-md"
-              onError={(e) => (e.target.src = '/placeholder-image.jpg')}
+              onError={(e) => (e.target.src = "/placeholder-image.jpg")}
             />
             {/* Left arrow */}
             <button
@@ -71,8 +74,9 @@ const PromoBlock = ({ title, description, images = [], reverse = false }) => {
 
       {/* Text Content */}
       <div
-        className={`lg:w-[590px] w-full text-center ${reverse ? 'lg:text-start' : 'lg:text-end'
-          }`}
+        className={`lg:w-[590px] w-full text-center ${
+          reverse ? "lg:text-start" : "lg:text-end"
+        }`}
       >
         <h2 className="font-figtree font-extrabold text-[34px] leading-[100%] tracking-[-0.03em] lg:text-[60px] lg:leading-[65px]">
           {title}
@@ -84,7 +88,9 @@ const PromoBlock = ({ title, description, images = [], reverse = false }) => {
 
         <button
           onClick={() => {
-            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+            document
+              .getElementById("contact")
+              ?.scrollIntoView({ behavior: "smooth" });
           }}
           className="bg-[#EA1B26] hover:bg-white hover:text-[#EA1B26] text-white px-6 py-2.5 font-bold text-lg transition-all duration-200"
         >
@@ -105,7 +111,7 @@ const PromoSection = () => {
         const data = await res.json();
         setPromos(data.data || []);
       } catch (err) {
-        console.error('Failed to load promotional offers:', err);
+        console.error("Failed to load promotional offers:", err);
       }
     };
 
@@ -113,7 +119,7 @@ const PromoSection = () => {
   }, []);
 
   return (
-    <section className="w-[335px] md:w-auto lg:w-[1310px] mx-auto text-white rounded-lg mb-[100px] overflow-hidden">
+    <section className="w-[335px] md:w-auto lg:w-[1340px] mx-auto text-white rounded-lg mb-[100px] overflow-hidden">
       {/* Logo */}
       <Link to="offers">
         <div className="flex justify-center items-center mb-10">
