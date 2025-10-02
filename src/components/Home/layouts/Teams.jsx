@@ -75,7 +75,7 @@ const Teams = () => {
         {/* Left Column */}
         <div className="w-full lg:w-[461px] lg:sticky lg:top-40 lg:self-start">
           <div className="max-w-[480px] w-full text-center lg:text-start mx-auto lg:mx-0">
-            <h1 className="font-figtree font-extrabold text-[34px] md:text-[44px] xl:text-[54px] 2xl:text-[64px] leading-[120%] tracking-[-0.03em] text-white">
+            <h1 className="font-figtree font-extrabold text-left text-[34px] md:text-[44px] xl:text-[54px] 2xl:text-[64px] leading-[120%] tracking-[-0.03em] text-white">
               What Our <br /> Team Offers:
             </h1>
 
