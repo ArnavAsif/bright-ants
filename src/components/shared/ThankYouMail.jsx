@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import modalImg from "../../assets/modal.svg";
 import { Link } from "react-router";
 
 const UpgradeThankYouModal = ({ onClose }) => {
@@ -20,19 +19,10 @@ const UpgradeThankYouModal = ({ onClose }) => {
         ref={modalRef}
         className="bg-black rounded-lg shadow-lg w-[400px] overflow-hidden"
       >
-        {/* Top Illustration */}
-        <div className="bg-gray-800 p-4">
-          <img
-            src={modalImg}
-            alt="Thank you illustration"
-            className="w-full object-contain"
-          />
-        </div>
-
         {/* Content */}
-        <div className="text-center px-6 py-8">
+        <div className="text-center px-6 py-12">
           <h2 className="text-white text-4xl font-extrabold font-[Figtree] mb-4 flex gap-6 flex-col">
-            <span>🎉</span>
+            <span className="text-[80px]">🎉</span>
             <span>You're all set!</span>
           </h2>
           <p className="text-gray-300 text-base mb-6">

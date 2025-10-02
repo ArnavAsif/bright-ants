@@ -35,12 +35,12 @@ const WorkingProcess = () => {
           <img
             src={one}
             alt="Step 1"
-            className="absolute bottom-[-48px] left-4 w-[106px] h-[105px] transition-all duration-500 ease-in-out group-hover:bottom-[-24px]"
+            className="absolute bottom-[-48px] left-4 w-[106px] h-[130px] transition-all duration-500 ease-in-out group-hover:bottom-[-24px]"
           />
           <img
             src={icon1}
             alt="Icon 1"
-            className="absolute bottom-4 right-4 w-[192px] h-[240px]"
+            className="absolute bottom-0 right-0 w-[192px] h-[240px]"
           />
         </div>
 
@@ -65,12 +65,12 @@ const WorkingProcess = () => {
           <img
             src={two}
             alt="Step 2"
-            className="absolute bottom-[-48px] left-4 w-[106px] h-[105px] transition-all duration-500 ease-in-out group-hover:bottom-[-24px]"
+            className="absolute bottom-[-48px] left-4 w-[106px] h-[130px] transition-all duration-500 ease-in-out group-hover:bottom-[-24px]"
           />
           <img
             src={icon2}
             alt="Icon 2"
-            className="absolute bottom-4 right-4 w-[192px] h-[240px]"
+            className="absolute bottom-0 right-0 w-[192px] h-[240px]"
           />
         </div>
 
@@ -95,12 +95,12 @@ const WorkingProcess = () => {
           <img
             src={three}
             alt="Step 3"
-            className="absolute bottom-[-48px] left-4 w-[106px] h-[105px] transition-all duration-500 ease-in-out group-hover:bottom-[-24px]"
+            className="absolute bottom-[-48px] left-4 w-[106px] h-[130px] transition-all duration-500 ease-in-out group-hover:bottom-[-24px]"
           />
           <img
             src={icon3}
             alt="Icon 3"
-            className="absolute bottom-4 right-4 w-[192px] h-[240px]"
+            className="absolute bottom-0 right-0 w-[192px] h-[240px]"
           />
         </div>
       </div>
