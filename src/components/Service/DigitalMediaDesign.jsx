@@ -73,7 +73,7 @@ const DigitalMediaDesign = () => {
                 key={i}
                 className="rounded-full p-[2px] bg-transparent hover:bg-gradient-to-r hover:from-[#2B70EA] hover:to-[#EA0B24] transition-all duration-300"
               >
-                <button className="bg-[#262628] text-[#FAFAFA] text-[16px] md:text-[16px] xl:text-[18px] px-4 py-2 rounded-full font-mulish hover:bg-white hover:text-[#1C1A1F] transition-all duration-300">
+                <button className="bg-[#262628] text-[#FAFAFA] text-[16px] md:text-[16px] xl:text-[18px] px-4 py-2 rounded-full font-mulish  transition-all duration-300">
                   {item}
                 </button>
               </div>
