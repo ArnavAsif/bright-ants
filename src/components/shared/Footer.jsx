@@ -154,6 +154,8 @@ const Footer = () => {
             <form onSubmit={onSubmit} className="flex flex-col gap-2">
               <input
                 type="email"
+                name="email"
+                required
                 placeholder="Your Email*"
                 className="p-2 rounded text-black bg-[#D9D9D9] outline-none my-[14px]"
               />
