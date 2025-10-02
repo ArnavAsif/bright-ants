@@ -3,75 +3,40 @@ import { useState } from "react";
 import UpgradeThankYouModal from "../../../shared/UpgradeThankYouModal";
 
 const ContactSection = () => {
-  // const [formData, setFormData] = useState({
-  //   firstname: "",
-  //   lastname: "",
-  //   email: "",
-  //   message: "",
-  // });
   const [showModal, setShowModal] = useState(false);
-
-  // const [status, setStatus] = useState('');
-
-  // const handleChange = (e) => {
-  //   setFormData({ ...formData, [e.target.name]: e.target.value });
-  // };
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   if (!formData.firstname || !formData.lastname || !formData.email || !formData.message) {
-  //     setStatus('Please fill out all fields.');
-  //     return;
-  //   }
-
-  //   try {
-  //     const res = await fetch('https://bright-ants-backend.onrender.com/email', {
-  //       method: 'POST',
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //       },
-  //       body: JSON.stringify(formData),
-  //     });
-
-  //     const result = await res.json();
-
-  //     if (res.ok) {
-  //       setStatus('✅ Email sent successfully!');
-  //       setFormData({ firstname: '', lastname: '', email: '', message: '' });
-
-  //       // ✅ Show the Thank You modal
-  //       setShowModal(true);
-  //     } else {
-  //       setStatus(`❌'Something went wrong.'}`);
-  //     }
-  //   } catch (err) {
-  //     setStatus('❌ Failed to send email.');
-  //   }
-  // };
+  const [loading, setLoading] = useState(false);
   const [result, setResult] = useState("");
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    setResult("Sending....");
+    setLoading(true);
+    setResult("");
     const formData = new FormData(event.target);
 
     formData.append("access_key", "c5b3a1fe-611d-4670-8086-11bf5bd57ccd");
+    formData.append("subject", "🎉 New Project Inquiry from BrightAnts!"); // optional
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
-    const data = await response.json();
+      const data = await response.json();
 
-    if (data.success) {
-      setResult("Form Submitted Successfully");
-      setShowModal(true);
-      event.target.reset();
-    } else {
-      console.log("Error", data);
-      setResult(data.message);
+      if (data.success) {
+        setResult("Form Submitted Successfully");
+        setShowModal(true);
+        event.target.reset();
+      } else {
+        console.error("Error", data);
+        setResult(data.message || "Failed to submit form");
+      }
+    } catch (error) {
+      console.error("Network error", error);
+      setResult("Network error occurred");
+    } finally {
+      setLoading(false); // Stop loading
     }
   };
 
@@ -194,9 +159,10 @@ const ContactSection = () => {
 
               <button
                 type="submit"
+                disabled={loading}
                 className="w-full bg-[#E40017] text-white font-semibold py-2 rounded hover:bg-red-700 transition-colors"
               >
-                Submit
+                {loading ? "Submitting" : "Submit"}
               </button>
 
               {status && <p className="text-sm mt-3">{status}</p>}

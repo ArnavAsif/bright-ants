@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import modalImg from "../../assets/modal.svg";
+import modalImg from "../../assets/mail.svg";
 
 const UpgradeThankYouModal = ({ onClose }) => {
   const modalRef = useRef();
@@ -20,11 +20,11 @@ const UpgradeThankYouModal = ({ onClose }) => {
         className="bg-black rounded-lg shadow-lg w-[400px] overflow-hidden"
       >
         {/* Top Illustration */}
-        <div className="bg-gray-800 p-4">
+        <div className="bg-black flex items-center justify-center pb-4 pt-10">
           <img
             src={modalImg}
             alt="Thank you illustration"
-            className="w-full object-contain"
+            className="w-[180px] h-[180px] object-contain"
           />
         </div>
 

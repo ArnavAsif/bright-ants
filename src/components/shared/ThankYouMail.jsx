@@ -31,8 +31,9 @@ const UpgradeThankYouModal = ({ onClose }) => {
 
         {/* Content */}
         <div className="text-center px-6 py-8">
-          <h2 className="text-white text-4xl font-extrabold font-[Figtree] mb-4">
-            You're all set! 🎉
+          <h2 className="text-white text-4xl font-extrabold font-[Figtree] mb-4 flex gap-6 flex-col">
+            <span>🎉</span>
+            <span>You're all set!</span>
           </h2>
           <p className="text-gray-300 text-base mb-6">
             Be the first to get our latest offers, pricing updates, and
