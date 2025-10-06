@@ -111,9 +111,16 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <a href="#" className="hover:text-red-500 transition text-white">
+            <NavLink
+              to="/blogs"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-red-500 transition"
+                  : "hover:text-red-500 transition text-white"
+              }
+            >
               Blog
-            </a>
+            </NavLink>
           </li>
           <li>
             <NavLink
@@ -273,13 +280,13 @@ const Navbar = () => {
             </li>
 
             <li>
-              <a
-                href="#"
+              <NavLink
+                to="/blogs"
                 onClick={handleCloseMenu}
                 className="hover:text-red-500"
               >
                 Blog
-              </a>
+              </NavLink>
             </li>
             <li>
               <NavLink
