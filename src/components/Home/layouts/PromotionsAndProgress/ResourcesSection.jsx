@@ -2,7 +2,7 @@ import tiger from "../../../../assets/resorurces/tiger.svg";
 
 const ResourcesSection = () => {
   return (
-    <section className="bg-[#0B0A29] text-white max-w-[1340px] mx-auto rounded-lg overflow-hidden my-[96px] md:my-[148px] px-5 sm:px-10 md:px-0 lg:py-7">
+    <section className="bg-[#0B0A29] text-white max-w-[1340px] mx-auto rounded-lg overflow-hidden my-[96px] md:my-[148px] px-5 sm:px-10 md:px-0 py-7">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-10 md:gap-16">
         {/* Text Content */}
         <div className="lg:w-1/2 md:pl-[60px] w-full">

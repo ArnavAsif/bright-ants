@@ -53,21 +53,24 @@ const PromoBlock = ({ title, description, images = [], reverse = false }) => {
           {description}
         </p>
 
-        <button
-          onClick={() => {
-            document
-              .getElementById("contact")
-              ?.scrollIntoView({ behavior: "smooth" });
-          }}
-          className="bg-[#EA1B26] hover:bg-white hover:text-[#EA1B26] text-white px-6 py-2.5 font-bold text-lg transition-all duration-200"
-        >
-          Get a Quote
-        </button>
-        <Link to="offers">
-          <button className="bg-[#005DAA] hover:bg-[#2374F2]  text-white px-6 py-2.5 font-bold text-lg transition-all duration-200 ml-6">
-            See all Promotional Offers
+        <div className="flex gap-6 flex-col lg:flex-row">
+          <button
+            onClick={() => {
+              document
+                .getElementById("contact")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="bg-[#EA1B26] hover:bg-white hover:text-[#EA1B26] text-white px-6 py-2.5 font-bold text-lg transition-all duration-200"
+          >
+            Get a Quote
           </button>
-        </Link>
+          <Link
+            to="offers"
+            className="bg-[#005DAA] hover:bg-[#2374F2]  text-white px-6 py-2.5 font-bold text-lg transition-all duration-200"
+          >
+            <button>See all Promotional Offers</button>
+          </Link>
+        </div>
       </div>
       {/* Image with arrows */}
       <div className="lg:w-[540px] w-full px-4 md:px-0 py-6 relative">
