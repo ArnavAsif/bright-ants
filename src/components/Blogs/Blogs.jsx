@@ -30,14 +30,14 @@ const Blogs = () => {
           <Link to={`/blogs/${blog.id}`} key={blog.id}>
             {/* Gradient wrapper */}
             <div className="w-full sm:w-[404px] p-[2px] border border-[#3A3A3A] hover:bg-gradient-to-r hover:from-[#2B70EA] hover:to-[#EA0B24] transition-all duration-500">
-              {/* Inner card */}
-              <div className="p-5 sm:p-8  bg-[#1C1A1F] shadow-[4px_4px_8px_0_rgba(0,0,0,0.25)]  h-full hover:bg-[#191B24] transition-all duration-200 ease-in-out">
+              {/* Inner card with fixed height */}
+              <div className="p-5 sm:p-8 bg-[#1C1A1F] shadow-[4px_4px_8px_0_rgba(0,0,0,0.25)] h-[662px] hover:bg-[#191B24] transition-all duration-200 ease-in-out flex flex-col">
                 <img
                   src={`${API}/files/${blog.image}`}
                   alt="blog"
                   className="w-full h-[220px] object-cover"
                 />
-                <div className="mt-6">
+                <div className="mt-6 flex flex-col flex-grow">
                   <h2 className="mb-[6px] text-3xl font-extrabold font-figtree">
                     {blog.title}
                   </h2>
@@ -50,10 +50,14 @@ const Blogs = () => {
                         })
                       : "N/A"}
                   </p>
-                  <p className="text-lg text-[#D8D8D8] mt-2 font-mulish leading-6 ">
-                    {blog.content}
+                  {/* Truncated description (340 chars here, can increase if needed) */}
+                  <p className="text-lg text-[#D8D8D8] mt-2 font-mulish leading-6">
+                    {blog.content.length > 340
+                      ? blog.content.slice(0, 340) + "..."
+                      : blog.content}
                   </p>
-                  <p className="underline mt-8 text-lg font-figtree">
+                  {/* Read More always at bottom */}
+                  <p className="underline mt-auto pt-6 text-lg font-figtree">
                     READ MORE
                   </p>
                 </div>
