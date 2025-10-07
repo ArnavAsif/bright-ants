@@ -61,7 +61,7 @@ const ContactUs = () => {
   return (
     <section
       id="contact"
-      className="text-white px-4  w-10/12 mx-auto relative z-10"
+      className="text-white px-4 lg:w-10/12 mx-auto relative z-10"
     >
       <div className="hidden lg:block absolute inset-0 max-w-[1173px] mx-auto left-0 right-0 z-0 opacity-70 pointer-events-none">
         <div className="grid grid-cols-2 h-full">
