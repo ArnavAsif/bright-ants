@@ -1,21 +1,34 @@
 import redBg from "../../assets/bg-we.png";
 import blueBg from "../../assets/bg-blue.png";
-import blog from "../../assets/blogImg2.svg";
-import blog2 from "../../assets/blogImg.svg";
+import blogImg from "../../assets/blogImg2.svg";
 import { useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router";
-
+const API = "https://bright-ants-backend.onrender.com";
 const Blog = () => {
   const { id } = useParams();
-  const [user, setUser] = useState(null);
+  const [blog, setBlog] = useState(null);
 
   useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+    fetch(`${API}/blogs/${id}`)
       .then((res) => res.json())
-      .then((data) => setUser(data));
+      .then((data) => setBlog(data.data));
   }, [id]);
 
-  if (!user) return <p>Loading...</p>;
+  if (!blog)
+    return (
+      <div className="flex items-center justify-center h-screen bg-gradient-to-br from-black to-red-950">
+        <div className="text-center">
+          {/* Gradient spinner */}
+          <div className="mx-auto mb-4 w-16 h-16 border-4 border-t-red-600 border-b-black border-l-black border-r-red-600 rounded-full animate-spin"></div>
+
+          {/* Loading text */}
+          <h2 className="text-xl font-semibold text-white mb-2">Loading...</h2>
+          <p className="text-gray-300">
+            Please wait while we fetch the content.
+          </p>
+        </div>
+      </div>
+    );
 
   return (
     <div className="max-w-[1310px] mx-auto pt-8 sm:pt-[96px] pb-12 relative z-10 overflow-hidden mb-10 sm:mb-[100px]">
@@ -35,7 +48,7 @@ const Blog = () => {
 
       {/* Main Image */}
       <div className="mt-12 lg:h-[344px]">
-        <img src={blog} alt="blog" className="w-full h-full" />
+        <img src={blogImg} alt="blog" className="w-full h-full" />
       </div>
 
       {/* Grid Section */}
@@ -129,32 +142,30 @@ const Blog = () => {
 
         {/* Blog Content */}
         <div>
-          <h1 className="text-left">{user.name}</h1>
+          <h1 className="text-left">{blog.title}</h1>
           <p className="italic text-[#8A8A8A] text-sm font-figtree mb-4 mt-[6px]">
-            02 Oct 2025
+            {blog.created_at
+              ? new Date(blog.created_at).toLocaleDateString("en-GB", {
+                  day: "numeric",
+                  month: "short",
+                  year: "numeric",
+                })
+              : "N/A"}
           </p>
           <p className="text-lg text-[#D8D8D8] font-mulish leading-6">
-            Great design isn't just about looks—it's about experience. At
-            BrightAnts, we craft seamless, intuitive, and visually engaging user
-            interfaces that enhance user journeys and drive engagement. Our
-            UI/UX design process blends creativity with usability, ensuring your
-            digital products are not only beautiful but also highly functional.
+            {blog.content}
           </p>
 
           <div className="lg:h-[344px] my-16">
             <img
-              src={blog2}
+              src={`${API}/files/${blog.image}`}
               alt="blog"
               className="w-full h-full object-cover"
             />
           </div>
 
           <p className="text-lg text-[#D8D8D8] font-mulish leading-6">
-            Great design isn't just about looks—it's about experience. At
-            BrightAnts, we craft seamless, intuitive, and visually engaging user
-            interfaces that enhance user journeys and drive engagement. Our
-            UI/UX design process blends creativity with usability, ensuring your
-            digital products are not only beautiful but also highly functional.
+            {blog.content}
           </p>
         </div>
       </div>
